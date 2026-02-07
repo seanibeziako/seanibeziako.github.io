@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sean Ibeziako - IT Support and Cybersecurity Professional. Portfolio showcasing technical projects, experience, and skills.">
+  <meta property="og:title" content="Sean Ibeziako | IT Support & Cybersecurity">
+  <meta property="og:description" content="IT Support and Cybersecurity professional with hands-on experience in enterprise network design, Windows administration, and technical troubleshooting. Based in Houston, TX.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seanibeziako.github.io">
+  <meta property="og:image" content="https://seanibeziako.github.io/assets/headshot.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sean Ibeziako | IT Support & Cybersecurity">
+  <meta name="twitter:description" content="IT Support and Cybersecurity professional. Enterprise networking, Windows admin, and technical troubleshooting. Houston, TX.">
+  <meta name="twitter:image" content="https://seanibeziako.github.io/assets/headshot.jpg">
   <title>Sean Ibeziako | IT Support &amp; Cybersecurity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +42,7 @@
 
   <!-- Hero -->
   <section class="hero" id="hero">
+    <canvas id="particleCanvas" class="hero-particles"></canvas>
     <div class="hero-grid"></div>
     <div class="hero-content">
       <div class="hero-text">
@@ -429,10 +439,100 @@
     </div>
   </section>
 
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="reveal">
+      <span class="section-label">// 07. Testimonials</span>
+      <h2 class="section-title">What People Say</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="var(--accent-dim)" stroke="none"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        </div>
+        <p class="testimonial-text">Recommendations coming soon. Connect with me on LinkedIn to be the first to leave one.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-info">
+            <a href="https://linkedin.com/in/seanibeziako" target="_blank" rel="noopener" class="testimonial-cta">Leave a Recommendation on LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Log -->
+  <section id="blog">
+    <div class="reveal">
+      <span class="section-label">// 08. Learning Log</span>
+      <h2 class="section-title">Notes From the Lab</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-date">Feb 2026</div>
+        <h3 class="blog-title">Building a Hub-and-Spoke Network From Scratch</h3>
+        <p class="blog-excerpt">Lessons learned from designing a scalable enterprise network in Cisco Packet Tracer - including VLAN segmentation, Inter-VLAN routing, and why documentation matters more than you think.</p>
+        <div class="blog-tags">
+          <span class="project-tech-tag">Networking</span>
+          <span class="project-tech-tag">Cisco</span>
+          <span class="project-tech-tag">VLANs</span>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-date">Jan 2026</div>
+        <h3 class="blog-title">CompTIA A+ Study Strategy</h3>
+        <p class="blog-excerpt">My approach to studying for the A+ certification - the resources I'm using, how I'm structuring practice labs, and tips for anyone starting the same path.</p>
+        <div class="blog-tags">
+          <span class="project-tech-tag">CompTIA A+</span>
+          <span class="project-tech-tag">Certification</span>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-date">Dec 2025</div>
+        <h3 class="blog-title">What I Learned Troubleshooting for 50+ Users</h3>
+        <p class="blog-excerpt">Reflections on 11 months of hands-on IT troubleshooting at Ferguson - pattern recognition, documentation habits, and the soft skills that matter most in support roles.</p>
+        <div class="blog-tags">
+          <span class="project-tech-tag">Help Desk</span>
+          <span class="project-tech-tag">Troubleshooting</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terminal Easter Egg -->
+  <div class="terminal-toggle" id="terminalToggle" title="Open Terminal">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+  </div>
+
+  <div class="terminal-window" id="terminalWindow">
+    <div class="terminal-header">
+      <div class="terminal-dots">
+        <span class="dot-red"></span>
+        <span class="dot-yellow"></span>
+        <span class="dot-green"></span>
+      </div>
+      <span class="terminal-title">sean@portfolio ~ %</span>
+      <button class="terminal-close" id="terminalClose">&times;</button>
+    </div>
+    <div class="terminal-body" id="terminalBody">
+      <div class="terminal-output">Welcome to Sean's portfolio terminal. Type <span style="color:var(--accent)">help</span> for available commands.</div>
+    </div>
+    <div class="terminal-input-line">
+      <span class="terminal-prompt">visitor@sean ~ $</span>
+      <input type="text" class="terminal-input" id="terminalInput" autocomplete="off" spellcheck="false" autofocus>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
   <!-- Contact -->
   <section id="contact" class="contact-section">
     <div class="reveal">
-      <span class="section-label">// 07. Contact</span>
+      <span class="section-label">// 09. Contact</span>
       <h2 class="section-title">Let's Connect</h2>
       <div class="section-divider"></div>
       <p class="contact-subtitle">
@@ -470,37 +570,85 @@
   </footer>
 
   <script>
-    // Typing animation
+    // ===== Particle Network Animation =====
+    const canvas = document.getElementById('particleCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    const PARTICLE_COUNT = 60;
+    const CONNECTION_DIST = 120;
+
+    function resizeCanvas() {
+      const hero = document.querySelector('.hero');
+      canvas.width = hero.offsetWidth;
+      canvas.height = hero.offsetHeight;
+    }
+
+    function createParticles() {
+      particles = [];
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: Math.random() * 2 + 1
+        });
+      }
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0, 212, 255, 0.3)';
+        ctx.fill();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j];
+          const dx = p.x - p2.x;
+          const dy = p.y - p2.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < CONNECTION_DIST) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = `rgba(0, 212, 255, ${0.12 * (1 - dist / CONNECTION_DIST)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(drawParticles);
+    }
+
+    resizeCanvas();
+    createParticles();
+    drawParticles();
+    window.addEventListener('resize', () => { resizeCanvas(); createParticles(); });
+
+    // ===== Typing Animation =====
     const tagline = document.getElementById('heroTagline');
-    const phrases = [
-      'Securing networks.',
-      'Solving problems.',
-      'Supporting users.'
-    ];
+    const phrases = ['Securing networks.', 'Solving problems.', 'Supporting users.'];
     let phraseIndex = 0;
     let charIndex = 0;
-    let currentText = '';
-    let isDeleting = false;
-    let isPaused = false;
 
     function type() {
       const current = phrases[phraseIndex];
-
-      if (!isDeleting && charIndex <= current.length) {
-        currentText = current.substring(0, charIndex);
-        tagline.textContent = (phraseIndex > 0 ? phrases.slice(0, phraseIndex).join(' ') + ' ' : '') + currentText;
+      if (charIndex <= current.length) {
+        tagline.textContent = (phraseIndex > 0 ? phrases.slice(0, phraseIndex).join(' ') + ' ' : '') + current.substring(0, charIndex);
         charIndex++;
-
         if (charIndex > current.length) {
           if (phraseIndex < phrases.length - 1) {
-            setTimeout(() => {
-              phraseIndex++;
-              charIndex = 0;
-              type();
-            }, 300);
+            setTimeout(() => { phraseIndex++; charIndex = 0; type(); }, 300);
             return;
           } else {
-            // All phrases typed - stop with cursor blinking
             tagline.classList.add('typed-done');
             return;
           }
@@ -508,17 +656,14 @@
         setTimeout(type, 50);
       }
     }
-
-    // Start typing after hero animations
     setTimeout(type, 1200);
 
-    // Scroll reveal
+    // ===== Scroll Reveal =====
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // Animate stat counters
           const counter = entry.target.querySelector('.stat-number[data-count]');
           if (counter && !counter.dataset.animated) {
             counter.dataset.animated = 'true';
@@ -527,40 +672,29 @@
             const step = Math.ceil(target / 40);
             const interval = setInterval(() => {
               current += step;
-              if (current >= target) {
-                current = target;
-                clearInterval(interval);
-              }
+              if (current >= target) { current = target; clearInterval(interval); }
               counter.textContent = current + '+';
             }, 30);
           }
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
     reveals.forEach(el => observer.observe(el));
 
-    // Nav scroll effect
+    // ===== Navigation =====
     const nav = document.getElementById('nav');
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Mobile nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-      });
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
     });
 
-    // Active nav link on scroll
     const sections = document.querySelectorAll('section[id]');
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY + 100;
@@ -569,11 +703,76 @@
         const height = section.offsetHeight;
         const id = section.getAttribute('id');
         const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-        if (link) {
-          link.classList.toggle('active', scrollY >= top && scrollY < top + height);
-        }
+        if (link) link.classList.toggle('active', scrollY >= top && scrollY < top + height);
       });
     });
+
+    // ===== Back to Top =====
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('show', window.scrollY > 500);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== Terminal Easter Egg =====
+    const terminalToggle = document.getElementById('terminalToggle');
+    const terminalWindow = document.getElementById('terminalWindow');
+    const terminalClose = document.getElementById('terminalClose');
+    const terminalInput = document.getElementById('terminalInput');
+    const terminalBody = document.getElementById('terminalBody');
+
+    terminalToggle.addEventListener('click', () => {
+      terminalWindow.classList.toggle('open');
+      if (terminalWindow.classList.contains('open')) terminalInput.focus();
+    });
+
+    terminalClose.addEventListener('click', () => {
+      terminalWindow.classList.remove('open');
+    });
+
+    const commands = {
+      help: 'Available commands: <span class="t-cmd">whoami</span>, <span class="t-cmd">skills</span>, <span class="t-cmd">experience</span>, <span class="t-cmd">education</span>, <span class="t-cmd">contact</span>, <span class="t-cmd">certifications</span>, <span class="t-cmd">projects</span>, <span class="t-cmd">clear</span>',
+      whoami: 'Sean Ibeziako - IT Support & Cybersecurity Professional<br>Location: Houston, TX<br>Currently pursuing AAS Cybersecurity (3.8 GPA)<br>Targeting: Help Desk, Desktop Support, Junior Cybersecurity roles',
+      skills: '<span class="t-label">OS:</span> Windows 10/11, Windows Server, macOS, Linux<br><span class="t-label">Help Desk:</span> ServiceNow, Jira, RDP, TeamViewer<br><span class="t-label">Networking:</span> TCP/IP, DNS, DHCP, VPN, VLANs, ACLs<br><span class="t-label">Admin:</span> Active Directory, M365, PowerShell, Azure AD<br><span class="t-label">Security:</span> Wireshark, VirtualBox, Log Analysis, Patch Mgmt',
+      experience: '<span class="t-label">Ferguson</span> (Dec 2024 - Nov 2025) - IT troubleshooting for 50+ users<br><span class="t-label">Depop</span> (May - Dec 2023) - 100+ support inquiries/cycle, 5-star rating<br><span class="t-label">Amazon</span> (Jan 2022 - May 2023) - Logistics tech troubleshooting',
+      education: 'Texas State Technical College<br>AAS Cybersecurity | GPA: 3.8<br>Expected Graduation: August 2026<br>Honors: Scholastic Excellence Award, Chancellor\'s Honor Roll',
+      contact: '<span class="t-label">Email:</span> sibeziako@gmail.com<br><span class="t-label">Phone:</span> 281-903-4361<br><span class="t-label">LinkedIn:</span> linkedin.com/in/seanibeziako',
+      certifications: 'CompTIA A+ - In Progress (Expected Q2 2026)<br>CompTIA Security+ - In Progress (Expected Q3 2026)',
+      projects: '<span class="t-label">Scalable Enterprise Network Simulation</span><br>Hub-and-Spoke campus network | Cisco Packet Tracer<br>3 VLANs, 6+ endpoints, Inter-VLAN routing, NAT/PAT, ACLs<br>100% connectivity pass rate'
+    };
+
+    terminalInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const cmd = terminalInput.value.trim().toLowerCase();
+        terminalInput.value = '';
+
+        const inputLine = document.createElement('div');
+        inputLine.classList.add('terminal-output');
+        inputLine.innerHTML = '<span class="terminal-prompt-echo">visitor@sean ~ $</span> ' + cmd;
+        terminalBody.appendChild(inputLine);
+
+        if (cmd === 'clear') {
+          terminalBody.innerHTML = '<div class="terminal-output">Terminal cleared. Type <span style="color:var(--accent)">help</span> for commands.</div>';
+        } else if (commands[cmd]) {
+          const response = document.createElement('div');
+          response.classList.add('terminal-output', 'terminal-response');
+          response.innerHTML = commands[cmd];
+          terminalBody.appendChild(response);
+        } else if (cmd) {
+          const response = document.createElement('div');
+          response.classList.add('terminal-output', 'terminal-error');
+          response.textContent = 'Command not found: ' + cmd + '. Type help for available commands.';
+          terminalBody.appendChild(response);
+        }
+
+        terminalBody.scrollTop = terminalBody.scrollHeight;
+      }
+    });
+
+    // Focus terminal input when clicking body
+    terminalBody.addEventListener('click', () => terminalInput.focus());
   </script>
 
 </body>
