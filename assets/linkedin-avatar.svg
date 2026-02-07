@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#1a1a3e"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </radialGradient>
+    <!-- Hat gradient -->
+    <linearGradient id="hatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a1a"/>
+      <stop offset="50%" stop-color="#cc0000"/>
+      <stop offset="100%" stop-color="#990000"/>
+    </linearGradient>
+    <!-- Skin tone -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffcc99"/>
+      <stop offset="100%" stop-color="#f0aa70"/>
+    </linearGradient>
+    <!-- Shirt/overalls -->
+    <linearGradient id="overallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2266ff"/>
+      <stop offset="100%" stop-color="#1144cc"/>
+    </linearGradient>
+    <!-- Cyber glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Headset gradient -->
+    <linearGradient id="headsetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#333"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <!-- Laptop screen glow -->
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#0099cc"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+    <!-- Matrix/code rain effect -->
+    <pattern id="codeRain" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <text x="5" y="12" font-family="monospace" font-size="8" fill="rgba(0,212,255,0.08)">01</text>
+      <text x="20" y="28" font-family="monospace" font-size="8" fill="rgba(0,212,255,0.06)">10</text>
+      <text x="8" y="38" font-family="monospace" font-size="8" fill="rgba(0,212,255,0.05)">11</text>
+    </pattern>
+    <!-- Circuit pattern -->
+    <pattern id="circuit" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="30" x2="20" y2="30" stroke="rgba(0,212,255,0.06)" stroke-width="1"/>
+      <line x1="30" y1="0" x2="30" y2="20" stroke="rgba(0,212,255,0.06)" stroke-width="1"/>
+      <circle cx="30" cy="30" r="2" fill="rgba(0,212,255,0.08)"/>
+      <line x1="40" y1="30" x2="60" y2="30" stroke="rgba(0,212,255,0.06)" stroke-width="1"/>
+      <line x1="30" y1="40" x2="30" y2="60" stroke="rgba(0,212,255,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#bgGrad)"/>
+
+  <!-- Circuit pattern overlay -->
+  <circle cx="256" cy="256" r="256" fill="url(#circuit)"/>
+  <circle cx="256" cy="256" r="256" fill="url(#codeRain)"/>
+
+  <!-- Outer ring glow -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="rgba(0,212,255,0.15)" stroke-width="2"/>
+  <circle cx="256" cy="256" r="244" fill="none" stroke="rgba(0,212,255,0.08)" stroke-width="1"/>
+
+  <!-- Floating binary/hex around edges -->
+  <g font-family="'Courier New', monospace" font-size="9" fill="rgba(0,212,255,0.12)">
+    <text x="50" y="100" transform="rotate(-30,50,100)">0x4F</text>
+    <text x="420" y="90" transform="rotate(20,420,90)">10110</text>
+    <text x="440" y="420" transform="rotate(-15,440,420)">0xFF</text>
+    <text x="60" y="400" transform="rotate(10,60,400)">01001</text>
+    <text x="100" y="460" transform="rotate(-5,100,460)">sudo</text>
+    <text x="380" y="470" transform="rotate(8,380,470)">ping</text>
+  </g>
+
+  <!-- === MARIO CHARACTER === -->
+
+  <!-- Body / Overalls -->
+  <g>
+    <!-- Shoulders and torso -->
+    <path d="M180 340 Q180 310 200 295 L312 295 Q332 310 332 340 L332 430 Q332 460 310 470 L202 470 Q180 460 180 430 Z" fill="url(#overallGrad)"/>
+    <!-- Overall straps -->
+    <rect x="208" y="295" width="22" height="80" rx="4" fill="#1955bb"/>
+    <rect x="282" y="295" width="22" height="80" rx="4" fill="#1955bb"/>
+    <!-- Overall buttons (gold) -->
+    <circle cx="219" cy="340" r="6" fill="#ffcc00" stroke="#cc9900" stroke-width="1.5"/>
+    <circle cx="293" cy="340" r="6" fill="#ffcc00" stroke="#cc9900" stroke-width="1.5"/>
+    <!-- Red shirt visible at top -->
+    <path d="M195 295 Q195 280 210 275 L302 275 Q317 280 317 295" fill="#cc0000" stroke="none"/>
+    <!-- Shirt collar -->
+    <ellipse cx="256" cy="278" rx="35" ry="8" fill="#dd1111"/>
+  </g>
+
+  <!-- Arms -->
+  <!-- Left arm holding laptop -->
+  <path d="M180 310 Q160 320 150 350 Q142 375 155 395 L190 390 Q185 360 190 340" fill="url(#skinGrad)" stroke="#e09960" stroke-width="1"/>
+  <!-- Right arm -->
+  <path d="M332 310 Q352 320 360 345 Q365 370 355 390 L325 385 Q328 360 325 340" fill="url(#skinGrad)" stroke="#e09960" stroke-width="1"/>
+
+  <!-- White gloves -->
+  <ellipse cx="155" cy="398" rx="22" ry="18" fill="white" stroke="#ddd" stroke-width="1.5"/>
+  <ellipse cx="352" cy="393" rx="22" ry="18" fill="white" stroke="#ddd" stroke-width="1.5"/>
+  <!-- Glove lines -->
+  <line x1="145" y1="392" x2="145" y2="405" stroke="#ddd" stroke-width="1" stroke-linecap="round"/>
+  <line x1="155" y1="389" x2="155" y2="404" stroke="#ddd" stroke-width="1" stroke-linecap="round"/>
+  <line x1="342" y1="387" x2="342" y2="400" stroke="#ddd" stroke-width="1" stroke-linecap="round"/>
+  <line x1="352" y1="385" x2="352" y2="400" stroke="#ddd" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- === LAPTOP === -->
+  <g transform="translate(120, 385) rotate(-8)">
+    <!-- Laptop base -->
+    <rect x="0" y="25" width="90" height="6" rx="2" fill="#333" stroke="#555" stroke-width="0.5"/>
+    <!-- Laptop screen back -->
+    <rect x="5" y="-30" width="80" height="55" rx="3" fill="#222" stroke="#444" stroke-width="1"/>
+    <!-- Laptop screen -->
+    <rect x="9" y="-26" width="72" height="47" rx="2" fill="#0a1628"/>
+    <!-- Screen content - terminal -->
+    <text x="14" y="-14" font-family="monospace" font-size="6" fill="#00d4ff">$ whoami</text>
+    <text x="14" y="-6" font-family="monospace" font-size="6" fill="#00ff88">sean.ibeziako</text>
+    <text x="14" y="2" font-family="monospace" font-size="6" fill="#00d4ff">$ nmap -sV</text>
+    <text x="14" y="10" font-family="monospace" font-size="6" fill="#888">Scanning...</text>
+    <rect x="14" y="14" width="20" height="2" rx="1" fill="#00d4ff" opacity="0.6">
+      <animate attributeName="width" values="20;45;20" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Screen glow effect -->
+    <rect x="9" y="-26" width="72" height="47" rx="2" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.3"/>
+  </g>
+
+  <!-- === FACE === -->
+  <g>
+    <!-- Face shape -->
+    <ellipse cx="256" cy="230" rx="62" ry="58" fill="url(#skinGrad)"/>
+
+    <!-- Ears -->
+    <ellipse cx="194" cy="225" rx="12" ry="16" fill="#f0aa70" stroke="#e09960" stroke-width="1"/>
+    <ellipse cx="318" cy="225" rx="12" ry="16" fill="#f0aa70" stroke="#e09960" stroke-width="1"/>
+
+    <!-- Eyes - bigger, more expressive Mario style -->
+    <g>
+      <!-- Eye whites -->
+      <ellipse cx="236" cy="220" rx="16" ry="19" fill="white"/>
+      <ellipse cx="276" cy="220" rx="16" ry="19" fill="white"/>
+      <!-- Irises - blue -->
+      <ellipse cx="238" cy="222" rx="10" ry="12" fill="#2266cc"/>
+      <ellipse cx="278" cy="222" rx="10" ry="12" fill="#2266cc"/>
+      <!-- Pupils -->
+      <ellipse cx="240" cy="222" rx="5" ry="6" fill="#111"/>
+      <ellipse cx="280" cy="222" rx="5" ry="6" fill="#111"/>
+      <!-- Eye shine -->
+      <ellipse cx="234" cy="217" rx="3" ry="4" fill="white" opacity="0.9"/>
+      <ellipse cx="274" cy="217" rx="3" ry="4" fill="white" opacity="0.9"/>
+      <!-- Eyebrows -->
+      <path d="M218 200 Q230 192 250 198" fill="none" stroke="#442200" stroke-width="4" stroke-linecap="round"/>
+      <path d="M262 198 Q282 192 294 200" fill="none" stroke="#442200" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- Big round nose -->
+    <ellipse cx="256" cy="240" rx="14" ry="12" fill="#e08850" stroke="#cc7744" stroke-width="1"/>
+    <ellipse cx="252" cy="236" rx="4" ry="3" fill="#f0a070" opacity="0.5"/>
+
+    <!-- Mustache - iconic Mario style -->
+    <g fill="#442200">
+      <path d="M224 248 Q230 255 238 252 Q248 248 256 252 Q264 248 274 252 Q282 255 288 248 Q290 260 280 265 Q268 270 256 264 Q244 270 232 265 Q222 260 224 248 Z"/>
+    </g>
+
+    <!-- Smile (visible below mustache) -->
+    <path d="M240 268 Q256 280 272 268" fill="none" stroke="#cc7744" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- === HAT === -->
+  <g>
+    <!-- Hat brim -->
+    <ellipse cx="260" cy="195" rx="75" ry="14" fill="#aa0000"/>
+    <ellipse cx="260" cy="193" rx="75" ry="14" fill="url(#hatGrad)"/>
+
+    <!-- Hat dome -->
+    <path d="M195 195 Q195 140 256 130 Q317 140 317 195" fill="url(#hatGrad)"/>
+    <path d="M195 195 Q195 140 256 130 Q317 140 317 195" fill="none" stroke="#aa0000" stroke-width="1"/>
+
+    <!-- Hat highlight -->
+    <path d="M210 170 Q230 148 265 145" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Hat emblem circle (white) -->
+    <ellipse cx="270" cy="165" rx="28" ry="24" fill="white" stroke="#ddd" stroke-width="1"/>
+
+    <!-- Terminal prompt instead of M -->
+    <text x="258" y="173" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="#cc0000" text-anchor="middle">&gt;_</text>
+  </g>
+
+  <!-- === HEADSET (IT Help Desk Style) === -->
+  <g>
+    <!-- Headband -->
+    <path d="M190 195 Q190 145 256 135 Q322 145 322 195" fill="none" stroke="#333" stroke-width="8" stroke-linecap="round"/>
+    <path d="M190 195 Q190 148 256 138 Q322 148 322 195" fill="none" stroke="#555" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Left ear cup -->
+    <rect x="176" y="210" width="24" height="35" rx="8" fill="url(#headsetGrad)" stroke="#555" stroke-width="1"/>
+    <rect x="180" y="215" width="16" height="25" rx="5" fill="#222"/>
+    <!-- Ear cushion -->
+    <rect x="172" y="212" width="8" height="31" rx="4" fill="#444"/>
+
+    <!-- Microphone boom -->
+    <path d="M188 240 Q185 260 200 272 Q215 280 225 278" fill="none" stroke="#444" stroke-width="4" stroke-linecap="round"/>
+    <path d="M188 240 Q185 260 200 272 Q215 280 225 278" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Microphone head -->
+    <ellipse cx="228" cy="276" rx="10" ry="8" fill="#333" stroke="#555" stroke-width="1"/>
+    <ellipse cx="228" cy="276" rx="6" ry="5" fill="#222"/>
+    <!-- Mic holes -->
+    <circle cx="225" cy="274" r="1" fill="#444"/>
+    <circle cx="228" cy="274" r="1" fill="#444"/>
+    <circle cx="231" cy="274" r="1" fill="#444"/>
+    <circle cx="225" cy="278" r="1" fill="#444"/>
+    <circle cx="228" cy="278" r="1" fill="#444"/>
+    <circle cx="231" cy="278" r="1" fill="#444"/>
+
+    <!-- LED indicator on headset -->
+    <circle cx="188" cy="214" r="3" fill="#00ff00">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- === FLOATING IT ELEMENTS === -->
+
+  <!-- WiFi signal icon (right side) -->
+  <g transform="translate(380, 160)" filter="url(#glow)">
+    <path d="M0 20 Q10 8 20 20" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <path d="M-5 15 Q10 0 25 15" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <path d="M-10 10 Q10 -8 30 10" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+    <circle cx="10" cy="24" r="3" fill="#00d4ff" opacity="0.8"/>
+  </g>
+
+  <!-- Shield/security icon (left side) -->
+  <g transform="translate(90, 155)" filter="url(#glow)">
+    <path d="M15 0 L30 8 L30 20 Q30 32 15 38 Q0 32 0 20 L0 8 Z" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.6"/>
+    <path d="M10 18 L14 22 L22 12" fill="none" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  </g>
+
+  <!-- Terminal/code icon (top right) -->
+  <g transform="translate(370, 100)" filter="url(#glow)">
+    <rect x="0" y="0" width="30" height="22" rx="3" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.5"/>
+    <text x="4" y="14" font-family="monospace" font-size="9" fill="#00d4ff" opacity="0.6">&gt;_</text>
+  </g>
+
+  <!-- Gear icon (bottom right floating) -->
+  <g transform="translate(385, 340)" filter="url(#glow)" opacity="0.4">
+    <circle cx="12" cy="12" r="5" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+    <line x1="12" y1="2" x2="12" y2="6" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="12" y1="18" x2="12" y2="22" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="2" y1="12" x2="6" y2="12" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="18" y1="12" x2="22" y2="12" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="5" y1="5" x2="8" y2="8" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="16" y1="16" x2="19" y2="19" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="5" y1="19" x2="8" y2="16" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="16" y1="8" x2="19" y2="5" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small floating particles -->
+  <circle cx="100" cy="300" r="2" fill="#00d4ff" opacity="0.3">
+    <animate attributeName="cy" values="300;290;300" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="420" cy="250" r="1.5" fill="#00ff88" opacity="0.3">
+    <animate attributeName="cy" values="250;240;250" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="130" cy="140" r="1.5" fill="#00d4ff" opacity="0.2">
+    <animate attributeName="cy" values="140;132;140" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="380" r="2" fill="#00d4ff" opacity="0.2">
+    <animate attributeName="cy" values="380;372;380" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Outer ring accent dots -->
+  <circle cx="256" cy="12" r="3" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="256" cy="500" r="3" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="12" cy="256" r="3" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="500" cy="256" r="3" fill="#00d4ff" opacity="0.4"/>
+</svg>
