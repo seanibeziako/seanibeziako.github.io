@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,9 +39,13 @@
         <p class="hero-greeting">// hello, world</p>
         <h1 class="hero-name">Sean <span class="highlight">Ibeziako</span></h1>
         <p class="hero-title">IT Support &amp; Cybersecurity Professional</p>
-        <p class="hero-tagline">Securing networks. Solving problems. Supporting users.</p>
+        <p class="hero-tagline" id="heroTagline"></p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="assets/Sean_Ibeziako_Resume.pdf" download class="btn btn-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
           <a href="#projects" class="btn btn-outline">View Projects</a>
         </div>
       </div>
@@ -370,10 +375,64 @@
     </div>
   </section>
 
+  <!-- Currently Working On -->
+  <section id="currently">
+    <div class="reveal">
+      <span class="section-label">// 06. Currently</span>
+      <h2 class="section-title">What I'm Working On</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="currently-grid">
+      <div class="currently-card reveal">
+        <div class="currently-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 15l-2 5l1.5-3h1l1.5 3l-2-5"/>
+            <circle cx="12" cy="9" r="6"/>
+            <path d="M9 9l1.5 1.5L14 7"/>
+          </svg>
+        </div>
+        <h3>CompTIA A+ Certification</h3>
+        <p>Studying for the A+ exam covering hardware, networking, mobile devices, OS troubleshooting, and operational procedures. Expected Q2 2026.</p>
+        <div class="currently-status">
+          <div class="progress-bar"><div class="progress-fill" style="width: 65%"></div></div>
+          <span class="progress-label">65% Complete</span>
+        </div>
+      </div>
+      <div class="currently-card reveal">
+        <div class="currently-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>CompTIA Security+</h3>
+        <p>Building knowledge in threat analysis, risk management, cryptography, and network security fundamentals. Expected Q3 2026.</p>
+        <div class="currently-status">
+          <div class="progress-bar"><div class="progress-fill" style="width: 30%"></div></div>
+          <span class="progress-label">30% Complete</span>
+        </div>
+      </div>
+      <div class="currently-card reveal">
+        <div class="currently-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3>Homelab Build</h3>
+        <p>Planning a home lab environment for Active Directory, Group Policy, and security tool testing. Hands-on practice with enterprise configurations.</p>
+        <div class="currently-status">
+          <div class="progress-bar"><div class="progress-fill" style="width: 15%"></div></div>
+          <span class="progress-label">Planning Phase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact" class="contact-section">
     <div class="reveal">
-      <span class="section-label">// 06. Contact</span>
+      <span class="section-label">// 07. Contact</span>
       <h2 class="section-title">Let's Connect</h2>
       <div class="section-divider"></div>
       <p class="contact-subtitle">
@@ -411,6 +470,48 @@
   </footer>
 
   <script>
+    // Typing animation
+    const tagline = document.getElementById('heroTagline');
+    const phrases = [
+      'Securing networks.',
+      'Solving problems.',
+      'Supporting users.'
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let currentText = '';
+    let isDeleting = false;
+    let isPaused = false;
+
+    function type() {
+      const current = phrases[phraseIndex];
+
+      if (!isDeleting && charIndex <= current.length) {
+        currentText = current.substring(0, charIndex);
+        tagline.textContent = (phraseIndex > 0 ? phrases.slice(0, phraseIndex).join(' ') + ' ' : '') + currentText;
+        charIndex++;
+
+        if (charIndex > current.length) {
+          if (phraseIndex < phrases.length - 1) {
+            setTimeout(() => {
+              phraseIndex++;
+              charIndex = 0;
+              type();
+            }, 300);
+            return;
+          } else {
+            // All phrases typed - stop with cursor blinking
+            tagline.classList.add('typed-done');
+            return;
+          }
+        }
+        setTimeout(type, 50);
+      }
+    }
+
+    // Start typing after hero animations
+    setTimeout(type, 1200);
+
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
