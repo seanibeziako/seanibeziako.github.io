@@ -284,6 +284,66 @@
       </div>
     </div>
 
+    <div class="project-card reveal">
+      <span class="project-status status-new">New</span>
+      <h3 class="project-title">IT Automation Toolkit</h3>
+      <p class="project-subtitle">PowerShell -- Personal Project -- Feb 2026</p>
+      <p class="project-description">
+        A comprehensive collection of 8 PowerShell automation scripts built for IT Help Desk, Desktop Support, and System Administration teams. Streamlines everything from Active Directory user lifecycle management to system diagnostics, workstation deployment, and automated alerting.
+      </p>
+
+      <!-- Module Overview Diagram -->
+      <div class="network-diagram">
+        <div class="diagram-label">Toolkit Modules</div>
+        <div class="diagram-content">
+          <div class="diagram-tier-label">Active Directory</div>
+          <div class="diagram-tier">
+            <div class="diagram-node node-router">New-ADUserOnboard<br>Automated Provisioning</div>
+            <div class="diagram-node node-router">Remove-ADUserOffboard<br>Secure Deprovisioning</div>
+            <div class="diagram-node node-router">Get-ADUserAudit<br>Security Risk Scoring</div>
+          </div>
+          <div class="diagram-connector-horizontal"></div>
+          <div class="diagram-tier-label">System Diagnostics</div>
+          <div class="diagram-tier">
+            <div class="diagram-node node-switch">Get-SystemHealth<br>CPU/Mem/Disk/Services</div>
+            <div class="diagram-node node-switch">Test-NetworkDiagnostics<br>DNS/Ping/Ports</div>
+          </div>
+          <div class="diagram-connector-horizontal"></div>
+          <div class="diagram-tier-label">Help Desk + Automation</div>
+          <div class="diagram-tier">
+            <div class="diagram-node node-vlan">Get-SoftwareInventory<br>Compliance Audit</div>
+            <div class="diagram-node node-vlan">New-WorkstationSetup<br>Automated Deployment</div>
+            <div class="diagram-node node-vlan">Send-AlertNotification<br>Email Monitoring</div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="project-highlights">
+        <li>Built AD user lifecycle automation - onboarding with department-based group assignments, credential generation; offboarding with account lockdown, data backup, and compliance reporting</li>
+        <li>Created AD security audit tool that scans for stale accounts, password policy violations, orphaned users, and privileged group memberships with a 0-100 risk score</li>
+        <li>Developed system health dashboard covering CPU, memory, disk, uptime, event logs, and critical services with color-coded PASS/WARN/FAIL output</li>
+        <li>Built network diagnostics suite testing gateway reachability, DNS resolution, external connectivity, and port availability with latency measurements</li>
+        <li>Automated workstation deployment: domain join, department-specific app installation via winget, power settings, network drive mapping, and setup reporting</li>
+        <li>Implemented HTML-formatted email alerting system for disk space, service failures, failed logins, and high CPU with fallback local logging</li>
+      </ul>
+      <div class="project-tech">
+        <span class="project-tech-tag">PowerShell</span>
+        <span class="project-tech-tag">Active Directory</span>
+        <span class="project-tech-tag">WMI/CIM</span>
+        <span class="project-tech-tag">SMTP</span>
+        <span class="project-tech-tag">Windows Registry</span>
+        <span class="project-tech-tag">winget</span>
+        <span class="project-tech-tag">Event Log</span>
+        <span class="project-tech-tag">Group Policy</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/seanibeziako/it-automation-toolkit" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+
     <div class="projects-cta reveal">
       More projects coming soon -- homelab builds, security tool implementations, and CTF challenges.
     </div>
@@ -740,7 +800,7 @@
       education: 'Texas State Technical College<br>AAS Cybersecurity | GPA: 3.8<br>Expected Graduation: August 2026<br>Honors: Scholastic Excellence Award, Chancellor\'s Honor Roll',
       contact: '<span class="t-label">Email:</span> sibeziako@gmail.com<br><span class="t-label">Phone:</span> 281-903-4361<br><span class="t-label">LinkedIn:</span> linkedin.com/in/seanibeziako',
       certifications: 'CompTIA A+ - In Progress (Expected Q2 2026)<br>CompTIA Security+ - In Progress (Expected Q3 2026)',
-      projects: '<span class="t-label">Scalable Enterprise Network Simulation</span><br>Hub-and-Spoke campus network | Cisco Packet Tracer<br>3 VLANs, 6+ endpoints, Inter-VLAN routing, NAT/PAT, ACLs<br>100% connectivity pass rate'
+      projects: '<span class="t-label">IT Automation Toolkit</span> (Feb 2026)<br>8 PowerShell modules for AD management, system diagnostics, workstation deployment, and automated alerting<br>github.com/seanibeziako/it-automation-toolkit<br><br><span class="t-label">Scalable Enterprise Network Simulation</span> (Nov-Dec 2025)<br>Hub-and-Spoke campus network | Cisco Packet Tracer<br>3 VLANs, 6+ endpoints, Inter-VLAN routing, NAT/PAT, ACLs<br>100% connectivity pass rate'
     };
 
     terminalInput.addEventListener('keydown', (e) => {
