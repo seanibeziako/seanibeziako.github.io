@@ -30,6 +30,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#lab">Lab</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -519,10 +520,138 @@
     </div>
   </section>
 
+  <!-- Home Lab -->
+  <section id="lab">
+    <div class="reveal">
+      <span class="section-label">// 04. Home Lab</span>
+      <h2 class="section-title">Detection Engineering Lab</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="lab-intro reveal">
+      <p>A self-hosted SIEM and detection lab I'm building to practice SOC analyst workflows end-to-end: log ingestion, alert tuning, detection authoring (Sigma), and incident triage against controlled adversary emulation. Status badges reflect the real state of each component.</p>
+    </div>
+
+    <div class="lab-grid">
+      <div class="lab-card reveal">
+        <div class="lab-card-header">
+          <h3 class="lab-card-title">Stack</h3>
+          <span class="lab-status lab-status-building">Building</span>
+        </div>
+        <ul class="lab-list">
+          <li><strong>Wazuh Manager</strong> - Ubuntu 22.04 LTS (SIEM + HIDS + log aggregation)</li>
+          <li><strong>Windows 11 Endpoint</strong> - Sysmon w/ Olaf Hartong config, Wazuh agent</li>
+          <li><strong>Ubuntu Endpoint</strong> - auditd, Wazuh agent</li>
+          <li><strong>Kali Linux</strong> - attacker VM for controlled adversary emulation (Atomic Red Team)</li>
+          <li><strong>pfSense</strong> - perimeter firewall, syslog forwarding to Wazuh</li>
+        </ul>
+      </div>
+
+      <div class="lab-card reveal">
+        <div class="lab-card-header">
+          <h3 class="lab-card-title">Topology</h3>
+          <span class="lab-status lab-status-planned">Planned</span>
+        </div>
+<pre class="lab-diagram">
+ [Kali Attacker]         [Windows 11 + Sysmon]
+        \                         /
+         \                       /
+          +------[ pfSense ]----+
+                      |
+               LAN 10.0.0.0/24
+                      |
+              [ Wazuh Manager ]
+              Ubuntu 22.04 LTS
+                      |
+                  [ Dashboards ]
+                  [ Alert Queue ]
+</pre>
+      </div>
+    </div>
+
+    <div class="lab-section-label reveal">Detection Rules - Mapped to MITRE ATT&amp;CK</div>
+    <div class="detection-grid">
+      <div class="detection-card reveal">
+        <div class="detection-header">
+          <span class="detection-tag">T1110.003</span>
+          <span class="lab-status lab-status-building">Building</span>
+        </div>
+        <h4 class="detection-title">Password Spray - Windows Logon Failures</h4>
+        <p class="detection-desc">Triggers when 10+ failed logons (EventID 4625) target 5+ unique accounts from a single source IP within a 5-minute window.</p>
+        <div class="detection-meta">
+          <span>Source: Windows Security Log</span>
+          <span>Rule: Sigma + Wazuh correlation</span>
+        </div>
+      </div>
+
+      <div class="detection-card reveal">
+        <div class="detection-header">
+          <span class="detection-tag">T1059.001</span>
+          <span class="lab-status lab-status-building">Building</span>
+        </div>
+        <h4 class="detection-title">Encoded PowerShell Execution</h4>
+        <p class="detection-desc">Detects PowerShell launched with <code>-EncodedCommand</code>, <code>-enc</code>, or base64 payloads via Sysmon Event 1, a common AV-evasion pattern in commodity malware.</p>
+        <div class="detection-meta">
+          <span>Source: Sysmon Event 1</span>
+          <span>Rule: Sigma (proc_creation_win_powershell_enc)</span>
+        </div>
+      </div>
+
+      <div class="detection-card reveal">
+        <div class="detection-header">
+          <span class="detection-tag">T1003.001</span>
+          <span class="lab-status lab-status-planned">Planned</span>
+        </div>
+        <h4 class="detection-title">LSASS Memory Access</h4>
+        <p class="detection-desc">Flags processes opening a handle to <code>lsass.exe</code> with suspicious GrantedAccess masks (0x1010, 0x1410) via Sysmon Event 10 - classic credential dumping signal (Mimikatz, procdump).</p>
+        <div class="detection-meta">
+          <span>Source: Sysmon Event 10</span>
+          <span>Rule: Sigma (sysmon_lsass_memdump)</span>
+        </div>
+      </div>
+
+      <div class="detection-card reveal">
+        <div class="detection-header">
+          <span class="detection-tag">T1053.005</span>
+          <span class="lab-status lab-status-planned">Planned</span>
+        </div>
+        <h4 class="detection-title">Suspicious Scheduled Task Creation</h4>
+        <p class="detection-desc">Alerts on <code>schtasks.exe</code> invocations creating tasks that run SYSTEM-level binaries or point to user-writable paths - a common persistence mechanism (EventID 4698).</p>
+        <div class="detection-meta">
+          <span>Source: Windows Security Log</span>
+          <span>Rule: Sigma (win_schtasks_persistence)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab-section-label reveal">Sample Detection (Sigma YAML)</div>
+    <pre class="lab-code reveal"><code>title: Potential Password Spray via Failed Logons
+id: a9b1c3f0-lab-0001
+status: experimental
+description: Detects password spray attempts - many failed logons
+  against multiple distinct accounts from a single source.
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+  timeframe: 5m
+  condition: selection | count(TargetUserName) by IpAddress &gt; 5
+level: medium
+tags:
+  - attack.credential_access
+  - attack.t1110.003</code></pre>
+
+    <div class="lab-cta reveal">
+      Source configs and detection rules: <a href="https://github.com/seanibeziako" target="_blank" rel="noopener">github.com/seanibeziako</a> (lab repo coming soon)
+    </div>
+  </section>
+
   <!-- Experience -->
   <section id="experience">
     <div class="reveal">
-      <span class="section-label">// 04. Experience</span>
+      <span class="section-label">// 05. Experience</span>
       <h2 class="section-title">Where I Have Worked</h2>
       <div class="section-divider"></div>
     </div>
@@ -568,7 +697,7 @@
   <!-- Education -->
   <section id="education">
     <div class="reveal">
-      <span class="section-label">// 05. Education &amp; Certs</span>
+      <span class="section-label">// 06. Education &amp; Certs</span>
       <h2 class="section-title">Credentials</h2>
       <div class="section-divider"></div>
     </div>
@@ -635,7 +764,7 @@
   <!-- Currently Working On -->
   <section id="currently">
     <div class="reveal">
-      <span class="section-label">// 06. Currently</span>
+      <span class="section-label">// 07. Currently</span>
       <h2 class="section-title">What I Am Working On</h2>
       <div class="section-divider"></div>
     </div>
@@ -689,7 +818,7 @@
   <!-- Learning Log -->
   <section id="blog">
     <div class="reveal">
-      <span class="section-label">// 07. Learning Log</span>
+      <span class="section-label">// 08. Learning Log</span>
       <h2 class="section-title">Notes From the Lab</h2>
       <div class="section-divider"></div>
     </div>
@@ -768,7 +897,7 @@
   <!-- Contact -->
   <section id="contact" class="contact-section">
     <div class="reveal">
-      <span class="section-label">// 08. Contact</span>
+      <span class="section-label">// 09. Contact</span>
       <h2 class="section-title">Let's Connect</h2>
       <div class="section-divider"></div>
       <p class="contact-subtitle">
