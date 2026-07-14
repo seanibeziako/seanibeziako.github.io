@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Security Audit Dashboard for workstation compliance scoring, risk analysis, and remediation tracking.">
+  <title>Security Audit Dashboard | Sean Ibeziako</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Workstation Compliance Lab</p>
+      <h1>Security Audit Dashboard</h1>
+    </div>
+    <div class="topbar-actions">
+      <input class="file-input" id="importFile" type="file" accept="application/json">
+      <button class="ghost-button" id="exportJson" type="button">Export JSON</button>
+      <label class="ghost-button" for="importFile">Import JSON</label>
+      <button class="ghost-button" id="resetDemo" type="button">Reset</button>
+      <button class="icon-button" id="printReport" title="Print report" aria-label="Print report">
+        <span aria-hidden="true">P</span>
+      </button>
+      <a class="ghost-link" href="../index.html#projects">Portfolio</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary-grid" aria-label="Audit summary">
+      <article class="score-panel">
+        <div class="score-ring" id="scoreRing" aria-label="Compliance score">
+          <span id="scoreValue">0</span>
+          <small>/100</small>
+        </div>
+        <div>
+          <p class="panel-label">Overall Security Posture</p>
+          <h2 id="postureLabel">Calculating</h2>
+          <p class="muted" id="postureSummary"></p>
+        </div>
+      </article>
+
+      <article class="metric-card">
+        <span class="metric-value" id="totalFindings">0</span>
+        <span class="metric-label">Controls Reviewed</span>
+      </article>
+      <article class="metric-card danger">
+        <span class="metric-value" id="criticalCount">0</span>
+        <span class="metric-label">Critical Findings</span>
+      </article>
+      <article class="metric-card warning">
+        <span class="metric-value" id="openCount">0</span>
+        <span class="metric-label">Open Remediations</span>
+      </article>
+      <article class="metric-card success">
+        <span class="metric-value" id="resolvedCount">0</span>
+        <span class="metric-label">Resolved Items</span>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <aside class="side-panel">
+        <div class="panel-section">
+          <p class="panel-label">Filters</p>
+          <div class="segmented" role="group" aria-label="Finding filter">
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="Non-Compliant">Open</button>
+            <button class="filter-button" data-filter="In Progress">Active</button>
+            <button class="filter-button" data-filter="Compliant">Passed</button>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <p class="panel-label">Remediation Progress</p>
+          <div class="progress-track">
+            <span id="remediationProgress"></span>
+          </div>
+          <p class="muted compact" id="remediationSummary"></p>
+        </div>
+
+        <div class="panel-section">
+          <p class="panel-label">Severity Mix</p>
+          <div class="severity-stack" id="severityStack"></div>
+          <div class="legend">
+            <span><i class="critical"></i>Critical</span>
+            <span><i class="major"></i>Major</span>
+            <span><i class="minor"></i>Minor</span>
+            <span><i class="passed"></i>Passed</span>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <p class="panel-label">Priority Queue</p>
+          <ol class="priority-list" id="priorityList"></ol>
+        </div>
+      </aside>
+
+      <section class="findings-panel" aria-label="Audit findings">
+        <div class="panel-heading">
+          <div>
+            <p class="panel-label">Assessment Results</p>
+            <h2>Windows Workstation Controls</h2>
+          </div>
+          <label class="search-box">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="banner, firewall, lockout">
+          </label>
+        </div>
+        <div class="findings-list" id="findingsList"></div>
+      </section>
+    </section>
+
+    <section class="report-panel" aria-label="Executive report">
+      <div>
+        <p class="panel-label">Executive Report</p>
+        <h2>Remediation Plan</h2>
+      </div>
+      <div class="report-grid" id="reportGrid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
