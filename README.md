@@ -12,8 +12,8 @@ Employment details follow the current résumé: Ingrasys (February–May 2026)
 and Ferguson Enterprises (December 2024–November 2025). Education lists the
 completed AAS in Cybersecurity Technology from Texas State Technical College.
 
-The downloadable résumé is a public copy without a phone number. The private
-master remains separate.
+Download: **Sean Ibeziako Resume.pdf**. The website copy omits the phone number;
+the master remains separate.
 
 Built with HTML, CSS, and vanilla JavaScript; hosted on GitHub Pages.
 
