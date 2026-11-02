@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sean Ibeziako - IT Support and Cybersecurity professional in Houston, TX. Wazuh SIEM detection lab, 9-tool Python security portfolio, PowerShell IT automation toolkit, enterprise network design (Cisco). AAS Cybersecurity, 3.9 GPA, CompTIA A+ and Security+ in progress.">
-  <meta name="keywords" content="IT Support, Cybersecurity, SOC Analyst, Help Desk, Desktop Support, Network Administration, Active Directory, PowerShell, Wazuh, SIEM, Sysmon, MITRE ATT&amp;CK, Sigma, Detection Engineering, CompTIA A+, Security+, Sean Ibeziako, Houston TX">
+  <meta name="description" content="Sean Ibeziako — IT support and operations professional in Sugar Land, Texas. Hardware diagnostics, identity and endpoint administration, and two technical labs. TSTC cybersecurity graduate.">
+  <meta name="keywords" content="IT Support, Help Desk, Desktop Support, Active Directory, Microsoft Entra ID, Intune, PowerShell, DNS, DHCP, Sean Ibeziako, Houston, Sugar Land">
   <meta property="og:title" content="Sean Ibeziako | IT Support &amp; Cybersecurity">
-  <meta property="og:description" content="Houston-based IT Support &amp; Cybersecurity professional. Wazuh SIEM home lab, 9-tool Python security portfolio, PowerShell IT automation toolkit, enterprise network design. AAS Cybersecurity (3.9 GPA), CompTIA A+ and Security+ in progress.">
+  <meta property="og:description" content="Sean Ibeziako — IT support and operations professional in Sugar Land, Texas. Hardware diagnostics, identity and endpoint administration, and two technical labs. TSTC cybersecurity graduate.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://seanibeziako.github.io">
   <meta property="og:image" content="https://seanibeziako.github.io/assets/headshot.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sean Ibeziako | IT Support &amp; Cybersecurity">
-  <meta name="twitter:description" content="Houston IT Support &amp; Cybersecurity. Wazuh SIEM home lab, 9 Python security tools, PowerShell IT automation toolkit. AAS Cybersecurity (3.9 GPA), A+ and Security+ in progress.">
+  <meta name="twitter:description" content="Sean Ibeziako — IT support and operations professional in Sugar Land, Texas. Hardware diagnostics, identity and endpoint administration, and two technical labs. TSTC cybersecurity graduate.">
   <meta name="twitter:image" content="https://seanibeziako.github.io/assets/headshot.png">
   <title>Sean Ibeziako | IT Support &amp; Cybersecurity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
@@ -31,12 +32,11 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#lab">Lab</a></li>
-        <li><a href="#experience">Experience</a></li>
+                <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="assets/Sean_Ibeziako_Resume.pdf" download class="nav-cta">Resume</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
         <span></span>
         <span></span>
         <span></span>
@@ -54,13 +54,9 @@
     </div>
 
     <div class="hero-content">
-      <span class="hero-eyebrow">IT Support &amp; Cybersecurity / Houston, TX</span>
-      <h1 class="hero-headline">
-        It's all about <em>the work.</em>
-      </h1>
-      <p class="hero-tagline">
-        Hands-on troubleshooting, a self-hosted Wazuh SOC lab, a PowerShell automation toolkit, and a 3.9 GPA pushing toward CompTIA A+ and Security+.
-      </p>
+      <span class="hero-eyebrow">IT Support &amp; Operations / Houston, TX</span>
+      <h1 class="hero-headline">Sean<br><em>Ibeziako.</em></h1>
+      <p class="hero-tagline">IT support and operations. Server diagnostics, identity and endpoint administration, and the work that keeps a team moving.</p>
       <div class="hero-cta-row">
         <a href="#projects" class="hero-arrow-link">
           See the work
@@ -81,96 +77,48 @@
     </div>
   </section>
 
-  <!-- Pillar Grid (4-card pattern) -->
-  <section id="pillars" class="section-bg-warm">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-eyebrow">// What I bring</span>
-        <h2 class="section-title">Built around <em>practical</em> problem solving.</h2>
-        <p class="section-lede">Four things I think about every day. Each one is something I've worked on, not just read about.</p>
-      </div>
-      <div class="pillar-grid">
-        <div class="pillar-card reveal">
-          <div class="pillar-number">01 / Build</div>
-          <h3 class="pillar-title">Tools that ship.</h3>
-          <p class="pillar-text">A workstation security audit dashboard, an 8-module PowerShell toolkit, a 9-tool Python security suite. I write code I'd actually want to use on the job.</p>
-          <a href="#projects" class="pillar-link">See projects
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
+  <!-- Areas of work -->
+  <section id="pillars" class="section-bg-warm"><div class="section-inner">
+    <div class="reveal"><span class="section-eyebrow">How I work</span><h2 class="section-title">Support starts with<br><em>understanding the problem.</em></h2></div>
+    <div class="pillar-grid">        <div class="pillar-card reveal">
+          <div class="pillar-number">01 / Hardware</div><h3 class="pillar-title">Find the fault.</h3>
+          <p class="pillar-text">Diagnostic logs, hardware telemetry, and vendor escalation at Ingrasys. A failed test is the start of the investigation.</p><a href="#experience" class="pillar-link">Work experience <span aria-hidden="true">↗</span></a>
         </div>
         <div class="pillar-card reveal">
-          <div class="pillar-number">02 / Work</div>
-          <h3 class="pillar-title">Documentation first.</h3>
-          <p class="pillar-text">100% incident logging accuracy across 11 months at Ferguson. KB articles that cut repeat issues 25%. The boring stuff is the work.</p>
-          <a href="#experience" class="pillar-link">See experience
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
+          <div class="pillar-number">02 / Support</div><h3 class="pillar-title">Leave a useful record.</h3>
+          <p class="pillar-text">ServiceNow workflows, knowledge articles, and clear escalation notes so the next person can pick up the issue.</p><a href="#experience" class="pillar-link">Support experience <span aria-hidden="true">↗</span></a>
         </div>
         <div class="pillar-card reveal">
-          <div class="pillar-number">03 / Learn</div>
-          <h3 class="pillar-title">Detection engineering.</h3>
-          <p class="pillar-text">Building a self-hosted Wazuh SIEM lab with Sigma rules mapped to MITRE ATT&amp;CK. Password spray, encoded PowerShell, LSASS access, scheduled task abuse.</p>
-          <a href="#lab" class="pillar-link">See the lab
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
+          <div class="pillar-number">03 / Systems</div><h3 class="pillar-title">Work through the details.</h3>
+          <p class="pillar-text">Active Directory, Microsoft Entra ID, Windows, and Intune. My current labs focus on identity and network troubleshooting.</p><a href="#projects" class="pillar-link">Current labs <span aria-hidden="true">↗</span></a>
         </div>
         <div class="pillar-card reveal">
-          <div class="pillar-number">04 / Headed</div>
-          <h3 class="pillar-title">Toward the SOC.</h3>
-          <p class="pillar-text">IT Help Desk and Desktop Support today, Junior SOC Analyst on the horizon. CompTIA A+ at 95%, Security+ next.</p>
-          <a href="#education" class="pillar-link">See credentials
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+          <div class="pillar-number">04 / Operations</div><h3 class="pillar-title">Keep the work moving.</h3>
+          <p class="pillar-text">RF scanners, inventory records, order exceptions, and customer questions. Support has to make sense on the warehouse floor, too.</p><a href="#experience" class="pillar-link">Operations experience <span aria-hidden="true">↗</span></a>
+        </div></div>
+  </div></section>
 
-  <!-- Stats Strip -->
-  <div class="stats-strip">
-    <div class="stats-grid">
-      <div class="stat-item reveal">
-        <div class="stat-value" data-count="100">100+</div>
-        <div class="stat-label">Support Issues Resolved</div>
-      </div>
-      <div class="stat-item reveal">
-        <div class="stat-value" data-count="50">50+</div>
-        <div class="stat-label">End Users Supported</div>
-      </div>
-      <div class="stat-item reveal">
-        <div class="stat-value">100%</div>
-        <div class="stat-label">Documentation Accuracy</div>
-      </div>
-      <div class="stat-item reveal">
-        <div class="stat-value">3.9</div>
-        <div class="stat-label">GPA</div>
-      </div>
-    </div>
-  </div>
+  <!-- Experience at a glance -->
+  <div class="stats-strip"><div class="stats-grid"><div class="stat-item reveal"><div class="stat-value">1,200</div><div class="stat-label">Devices in incident-triage scope</div></div><div class="stat-item reveal"><div class="stat-value">400</div><div class="stat-label">Endpoints in deployment coordination</div></div><div class="stat-item reveal"><div class="stat-value">32%</div><div class="stat-label">Reduction in average resolution time</div></div><div class="stat-item reveal"><div class="stat-value">2</div><div class="stat-label">Current technical labs</div></div></div></div>
 
   <!-- About -->
   <section id="about">
     <div class="section-inner">
       <div class="reveal">
-        <span class="section-eyebrow">// 01. About</span>
+        <span class="section-eyebrow">About</span>
         <h2 class="section-title">Who I am.</h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p>
-            I am an IT Support and Cybersecurity student with hands-on experience in enterprise network design, Windows administration, and technical troubleshooting. I have a track record of resolving 100+ support inquiries under SLA and maintaining 100% documentation accuracy across every role I have held.
-          </p>
-          <p>
-            I am in my final semester of the <strong>Associate of Applied Science in Cybersecurity</strong> program at Texas State Technical College, completing general education requirements after finishing my core technical cybersecurity coursework. I hold a <strong>3.9 GPA</strong> and am building toward <strong>CompTIA A+</strong> and <strong>Security+</strong> certifications. My goal is to transition into a full-time IT Support or Junior Cybersecurity role where I can apply my technical foundation and grow.
-          </p>
-          <p>
-            What sets me apart is a combination of real-world troubleshooting experience, strong documentation habits, and a genuine drive to solve problems. Whether it is diagnosing hardware failures for 50+ users on a warehouse floor or resolving platform issues for a global marketplace with 30M+ users, I bring the same level of focus and follow-through.
-          </p>
+          <p>I work in technical support and operations, with experience in hardware diagnostics, identity and endpoint administration, inventory control, and distribution workflows.</p>
+          <p>At Ingrasys, I investigated server test failures and coordinated technical escalations. At Ferguson, I worked with warehouse systems and RF scanners, helped resolve device issues, and kept inventory and order records accurate.</p>
+          <p>I graduated from Texas State Technical College in August 2026 with an Associate of Applied Science in Cybersecurity Technology. I'm looking for my next role in IT support or desktop support.</p>
+
 
           <dl class="about-meta">
             <div class="about-meta-item">
               <dt>Location</dt>
-              <dd>Houston / Katy, TX</dd>
+              <dd>Sugar Land / Houston, TX</dd>
             </div>
             <div class="about-meta-item">
               <dt>GPA</dt>
@@ -178,15 +126,15 @@
             </div>
             <div class="about-meta-item">
               <dt>Degree</dt>
-              <dd>AAS Cybersecurity</dd>
+              <dd>AAS Cybersecurity Technology</dd>
             </div>
             <div class="about-meta-item">
-              <dt>Graduation</dt>
+              <dt>Graduated</dt>
               <dd>August 2026</dd>
             </div>
             <div class="about-meta-item">
               <dt>Target Roles</dt>
-              <dd>IT Help Desk, Desktop Support, Junior SOC Analyst</dd>
+              <dd>IT Help Desk, Desktop Support</dd>
             </div>
             <div class="about-meta-item">
               <dt>Availability</dt>
@@ -202,519 +150,29 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="section-bg-warm">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-eyebrow">// 02. Skills</span>
-        <h2 class="section-title">Technical toolkit.</h2>
-        <p class="section-lede">The platforms, protocols, and practices I work with every day.</p>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card reveal">
-          <div class="skill-card-head">
-            <div class="skill-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <div class="skill-card-title">Operating Systems</div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Windows 10/11</span>
-            <span class="skill-tag">Windows Server</span>
-            <span class="skill-tag">macOS</span>
-            <span class="skill-tag">Linux/Unix</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-card-head">
-            <div class="skill-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            </div>
-            <div class="skill-card-title">Help Desk &amp; Support</div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">ServiceNow</span>
-            <span class="skill-tag">Jira</span>
-            <span class="skill-tag">RDP</span>
-            <span class="skill-tag">TeamViewer</span>
-            <span class="skill-tag">End-User Support</span>
-            <span class="skill-tag">Hardware/Software Troubleshooting</span>
-            <span class="skill-tag">Incident Management</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-card-head">
-            <div class="skill-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-            </div>
-            <div class="skill-card-title">Networking</div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">TCP/IP</span>
-            <span class="skill-tag">DNS</span>
-            <span class="skill-tag">DHCP</span>
-            <span class="skill-tag">VPN</span>
-            <span class="skill-tag">VLANs</span>
-            <span class="skill-tag">OSPF</span>
-            <span class="skill-tag">NAT/PAT</span>
-            <span class="skill-tag">ACLs</span>
-            <span class="skill-tag">802.1Q Trunking</span>
-            <span class="skill-tag">Cisco Packet Tracer</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-card-head">
-            <div class="skill-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-            </div>
-            <div class="skill-card-title">Systems Administration</div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Active Directory</span>
-            <span class="skill-tag">Microsoft 365</span>
-            <span class="skill-tag">Group Policy</span>
-            <span class="skill-tag">Exchange Online</span>
-            <span class="skill-tag">Azure AD</span>
-            <span class="skill-tag">PowerShell</span>
-            <span class="skill-tag">Backup &amp; Recovery</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-card-head">
-            <div class="skill-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div class="skill-card-title">Security &amp; Tools</div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Wireshark</span>
-            <span class="skill-tag">VirtualBox/VMware</span>
-            <span class="skill-tag">Event Viewer</span>
-            <span class="skill-tag">Log Analysis</span>
-            <span class="skill-tag">Antivirus/Antimalware</span>
-            <span class="skill-tag">Patch Management</span>
-            <span class="skill-tag">Security Policies</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-card-head">
-            <div class="skill-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <div class="skill-card-title">Core Competencies</div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Technical Documentation</span>
-            <span class="skill-tag">Root Cause Analysis</span>
-            <span class="skill-tag">SLA Management</span>
-            <span class="skill-tag">ITIL Basics</span>
-            <span class="skill-tag">Asset Management</span>
-            <span class="skill-tag">Customer Service</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="skills" class="section-bg-warm"><div class="section-inner">
+    <div class="reveal"><span class="section-eyebrow">Skills</span><h2 class="section-title">The tools behind <em>the work.</em></h2><p class="section-lede">Hardware and systems support, with an operations background.</p></div>
+    <div class="skills-grid"><div class="skill-card reveal"><div class="skill-card-head"><div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div class="skill-card-title">Operating Systems</div></div><div class="skill-tags"><span class="skill-tag">Windows 10/11</span><span class="skill-tag">Windows Server</span><span class="skill-tag">Linux</span></div></div><div class="skill-card reveal"><div class="skill-card-head"><div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div class="skill-card-title">Help Desk &amp; Support</div></div><div class="skill-tags"><span class="skill-tag">ServiceNow</span><span class="skill-tag">Hardware diagnostics</span><span class="skill-tag">Incident triage</span><span class="skill-tag">Knowledge articles</span><span class="skill-tag">Issue escalation</span></div></div><div class="skill-card reveal"><div class="skill-card-head"><div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div class="skill-card-title">Networking</div></div><div class="skill-tags"><span class="skill-tag">DNS</span><span class="skill-tag">DHCP</span><span class="skill-tag">VPN</span><span class="skill-tag">Connectivity troubleshooting</span><span class="skill-tag">Cisco Packet Tracer</span></div></div><div class="skill-card reveal"><div class="skill-card-head"><div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div><div class="skill-card-title">Identity &amp; Endpoints</div></div><div class="skill-tags"><span class="skill-tag">Active Directory</span><span class="skill-tag">Microsoft Entra ID</span><span class="skill-tag">Microsoft 365</span><span class="skill-tag">Intune</span><span class="skill-tag">Group Policy</span></div></div><div class="skill-card reveal"><div class="skill-card-head"><div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="skill-card-title">Scripting &amp; Analysis</div></div><div class="skill-tags"><span class="skill-tag">PowerShell</span><span class="skill-tag">Python</span><span class="skill-tag">Diagnostic logs</span><span class="skill-tag">Root-cause analysis</span><span class="skill-tag">Reporting</span></div></div><div class="skill-card reveal"><div class="skill-card-head"><div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="skill-card-title">Operations</div></div><div class="skill-tags"><span class="skill-tag">RF scanners</span><span class="skill-tag">Inventory reconciliation</span><span class="skill-tag">Asset tracking</span><span class="skill-tag">Order fulfillment</span><span class="skill-tag">Customer service</span></div></div></div>
+  </div></section>
 
   <!-- Projects -->
-  <section id="projects">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-eyebrow">// 03. Projects</span>
-        <h2 class="section-title">What I have <em>built.</em></h2>
-        <p class="section-lede">Three feature projects, then a ten-tool security portfolio. Code on GitHub, dashboards live in the browser.</p>
-      </div>
-
-      <div class="project-card featured reveal">
-        <div class="project-hero-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80&auto=format&fit=crop');" aria-hidden="true"></div>
-        <span class="project-status">New / May 2026</span>
-        <h3 class="project-title">Security Audit Dashboard</h3>
-        <p class="project-subtitle">HTML / CSS / JavaScript - Workstation Compliance &amp; Risk Scoring</p>
-        <p class="project-description">
-          A defensive cybersecurity dashboard that converts workstation audit findings into a 0-100 posture score, severity breakdown, remediation queue, searchable control list, and executive report. Built from a completed Windows workstation security assessment and designed for blue-team review workflows.
-        </p>
-        <div class="audit-preview" aria-label="Security Audit Dashboard preview">
-          <div class="audit-preview-header">
-            <span></span><span></span><span></span>
-            <strong>security-audit-dashboard</strong>
-          </div>
-          <div class="audit-preview-body">
-            <div class="audit-score-card">
-              <div class="audit-score-ring" data-score="77"></div>
-              <div>
-                <span class="audit-kicker">Overall Posture</span>
-                <strong>Moderate Risk</strong>
-                <small>12 controls need action</small>
-              </div>
-            </div>
-            <div class="audit-preview-metrics">
-              <span><strong>4</strong> Critical</span>
-              <span><strong>6</strong> Major</span>
-              <span><strong>2</strong> Minor</span>
-            </div>
-            <div class="audit-workflow">
-              <div><span>01</span><strong>Assess</strong></div>
-              <div><span>02</span><strong>Prioritize</strong></div>
-              <div><span>03</span><strong>Remediate</strong></div>
-            </div>
-          </div>
-        </div>
-        <ul class="project-highlights">
-          <li>Built weighted scoring logic so critical account-lockout and access-control failures impact the posture score more than lower-risk hygiene issues</li>
-          <li>Created a searchable findings interface covering 20 workstation controls, including password policy, firewall status, patching, backups, RDP credential storage, AutoPlay, and anonymous access</li>
-          <li>Designed a remediation queue that prioritizes critical and major findings for a practical security hardening plan</li>
-          <li>Added print-friendly executive reporting so the dashboard can produce a clean assessment summary for documentation</li>
-        </ul>
-        <div class="project-tech">
-          <span class="project-tech-tag">JavaScript</span>
-          <span class="project-tech-tag">Risk Scoring</span>
-          <span class="project-tech-tag">Compliance</span>
-          <span class="project-tech-tag">Windows Security</span>
-          <span class="project-tech-tag">Remediation Planning</span>
-        </div>
-        <div class="project-links">
-          <a href="security-audit-dashboard/index.html" class="btn btn-primary btn-sm">View Live Demo</a>
-        </div>
-      </div>
-
-      <div class="project-card featured reveal">
-        <div class="project-hero-image" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80&auto=format&fit=crop');" aria-hidden="true"></div>
-        <span class="project-status">New / Feb 2026</span>
-        <h3 class="project-title">IT Automation Toolkit</h3>
-        <p class="project-subtitle">PowerShell - github.com/seanibeziako/it-automation-toolkit</p>
-        <p class="project-description">
-          An 8-module PowerShell automation toolkit built for IT Help Desk, Desktop Support, and System Administration teams. Covers the full spectrum of common IT operations: from Active Directory user lifecycle management to system diagnostics, workstation deployment, software compliance, and automated alerting.
-        </p>
-        <div class="network-diagram">
-          <div class="diagram-label">Toolkit Architecture / 8 Modules</div>
-          <div class="diagram-content">
-            <div class="diagram-tier-label">Active Directory Management</div>
-            <div class="diagram-tier">
-              <div class="diagram-node node-router">New-ADUserOnboard<br>Automated Provisioning</div>
-              <div class="diagram-node node-router">Remove-ADUserOffboard<br>Secure Deprovisioning</div>
-              <div class="diagram-node node-router">Get-ADUserAudit<br>Security Risk Scoring</div>
-            </div>
-            <div class="diagram-tier-label">System Diagnostics</div>
-            <div class="diagram-tier">
-              <div class="diagram-node node-switch">Get-SystemHealth<br>CPU / Memory / Disk / Services</div>
-              <div class="diagram-node node-switch">Test-NetworkDiagnostics<br>DNS / Ping / Ports / Latency</div>
-            </div>
-            <div class="diagram-tier-label">Help Desk + Automation</div>
-            <div class="diagram-tier">
-              <div class="diagram-node node-vlan">Get-SoftwareInventory<br>Compliance Audit</div>
-              <div class="diagram-node node-vlan">New-WorkstationSetup<br>Automated Deployment</div>
-              <div class="diagram-node node-vlan">Send-AlertNotification<br>Email Monitoring</div>
-            </div>
-          </div>
-        </div>
-        <ul class="project-highlights">
-          <li>Developed 8-module PowerShell automation toolkit covering Active Directory management, system diagnostics, workstation deployment, and automated alerting</li>
-          <li>Built AD user lifecycle scripts: onboarding with standardized group assignments and credential generation, offboarding with account lockdown, data backup, and compliance reporting</li>
-          <li>Created AD security audit tool scanning for stale accounts, password policy violations, orphaned users, and privileged group memberships with a 0-100 risk scoring dashboard</li>
-          <li>Developed system health monitoring with color-coded PASS/WARN/FAIL output covering CPU, memory, disk, uptime, event logs, and critical services with CSV export</li>
-          <li>Built network diagnostics suite testing gateway reachability, DNS resolution, external connectivity, and port availability with latency measurements</li>
-          <li>Automated workstation deployment workflow including domain join, department-based app installation via winget, power configuration, and network drive mapping</li>
-          <li>Implemented HTML-formatted email alerting system for disk space warnings, service failures, failed logins, and high CPU with fallback local logging</li>
-        </ul>
-        <div class="project-tech">
-          <span class="project-tech-tag">PowerShell</span>
-          <span class="project-tech-tag">Active Directory</span>
-          <span class="project-tech-tag">WMI/CIM</span>
-          <span class="project-tech-tag">SMTP</span>
-          <span class="project-tech-tag">Windows Registry</span>
-          <span class="project-tech-tag">winget</span>
-          <span class="project-tech-tag">Event Log</span>
-          <span class="project-tech-tag">Group Policy</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/seanibeziako/it-automation-toolkit" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View on GitHub</a>
-        </div>
-      </div>
-
-      <div class="project-card featured reveal">
-        <div class="project-hero-image" style="background-image: url('https://images.unsplash.com/photo-1591808216268-ce0b82787efe?w=1600&q=80&auto=format&fit=crop');" aria-hidden="true"></div>
-        <span class="project-status">Completed / Dec 2025</span>
-        <h3 class="project-title">Scalable Enterprise Network Simulation</h3>
-        <p class="project-subtitle">Cisco Packet Tracer - Academic Project - Nov to Dec 2025</p>
-        <p class="project-description">
-          Designed and deployed a full Hub-and-Spoke campus network with Collapsed Core architecture, simulating a real enterprise environment with multiple departments, segmented traffic, and centralized services.
-        </p>
-        <div class="network-diagram">
-          <div class="diagram-label">Network Topology</div>
-          <div class="diagram-content">
-            <div class="diagram-tier-label">Internet Edge</div>
-            <div class="diagram-tier">
-              <div class="diagram-node node-router">ISR 4331 Router<br>NAT/PAT + ACLs</div>
-            </div>
-            <div class="diagram-tier-label">Core / Distribution</div>
-            <div class="diagram-tier">
-              <div class="diagram-node node-router">Router-on-a-Stick<br>Inter-VLAN Routing<br>802.1Q Trunking</div>
-            </div>
-            <div class="diagram-tier-label">Access Layer</div>
-            <div class="diagram-tier">
-              <div class="diagram-node node-switch">Switch 1<br>Catalyst 2960</div>
-              <div class="diagram-node node-switch">Switch 2<br>Catalyst 2960</div>
-              <div class="diagram-node node-switch">Switch 3<br>Catalyst 2960</div>
-            </div>
-            <div class="diagram-tier-label">VLANs</div>
-            <div class="diagram-tier">
-              <div class="diagram-node node-vlan">VLAN 10 / Admin</div>
-              <div class="diagram-node node-vlan">VLAN 20 / Sales</div>
-              <div class="diagram-node node-vlan">VLAN 30 / Management</div>
-            </div>
-          </div>
-        </div>
-        <ul class="project-highlights">
-          <li>Built network supporting 3 VLANs, 6+ endpoints, and 3 subnets across Admin, Sales, and Management divisions</li>
-          <li>Configured Inter-VLAN routing via Router-on-a-Stick (ISR 4331) with 802.1Q trunking on Catalyst 2960 switches</li>
-          <li>Deployed centralized DHCP with per-VLAN pools, eliminating 100% of manual IP configuration errors</li>
-          <li>Implemented NAT Overload (PAT) and ACL-based edge security for controlled internet access</li>
-          <li>Validated full connectivity through Layer 1-3 diagnostics achieving 100% pass rate across all network paths</li>
-          <li>Authored 3-page technical documentation including topology diagrams, VLAN tables, and full command references</li>
-        </ul>
-        <div class="project-tech">
-          <span class="project-tech-tag">Cisco Packet Tracer</span>
-          <span class="project-tech-tag">VLANs</span>
-          <span class="project-tech-tag">DHCP</span>
-          <span class="project-tech-tag">NAT/PAT</span>
-          <span class="project-tech-tag">ACLs</span>
-          <span class="project-tech-tag">802.1Q Trunking</span>
-          <span class="project-tech-tag">OSPF</span>
-        </div>
-      </div>
-
-      <div class="project-grid-label reveal">Security Tools Portfolio / Feb 2026</div>
-      <div class="project-grid">
-        <div class="project-mini-card reveal">
-          <div class="mini-title">SIEM Log Analyzer</div>
-          <div class="mini-desc">Parses and correlates security logs from Syslog, Windows Event, and firewall sources to detect brute-force attacks, privilege escalation, port scans, and after-hours access.</div>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">Log Analysis</span>
-            <span class="project-tech-tag">SIEM</span>
-          </div>
-          <a href="https://github.com/seanibeziako/siem-log-analyzer" target="_blank" rel="noopener" class="mini-link">View on GitHub →</a>
-        </div>
-        <div class="project-mini-card reveal">
-          <div class="mini-title">Threat Intel Dashboard</div>
-          <div class="mini-desc">Aggregates IOCs from AbuseIPDB, VirusTotal, and AlienVault OTX into a searchable SQLite database with normalized threat scoring and CSV/JSON export.</div>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">OSINT</span>
-            <span class="project-tech-tag">SQLite</span>
-          </div>
-          <a href="https://github.com/seanibeziako/threat-intel-dashboard" target="_blank" rel="noopener" class="mini-link">View on GitHub →</a>
-        </div>
-        <div class="project-mini-card reveal">
-          <div class="mini-title">Vulnerability Scanner</div>
-          <div class="mini-desc">Network vulnerability scanner with host discovery, TCP port scanning, service/banner detection, and automated CVE lookup via the NIST NVD API.</div>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">Scapy</span>
-            <span class="project-tech-tag">NVD API</span>
-          </div>
-          <a href="https://github.com/seanibeziako/vulnerability-scanner" target="_blank" rel="noopener" class="mini-link">View on GitHub →</a>
-        </div>
-        <div class="project-mini-card reveal">
-          <div class="mini-title">Network Traffic Analyzer</div>
-          <div class="mini-desc">PCAP analysis tool that detects port scans, DNS tunneling, C2 beaconing, ICMP tunneling, and data exfiltration using packet inspection and entropy analysis.</div>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">Scapy</span>
-            <span class="project-tech-tag">PCAP</span>
-          </div>
-          <a href="https://github.com/seanibeziako/network-traffic-analyzer" target="_blank" rel="noopener" class="mini-link">View on GitHub →</a>
-        </div>
-        <div class="project-mini-card reveal">
-          <div class="mini-title">Firewall Rule Analyzer</div>
-          <div class="mini-desc">Parses iptables, CSV, and JSON firewall rulesets to detect overly permissive rules, shadow rules, missing default deny, and dangerous port exposure.</div>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">iptables</span>
-            <span class="project-tech-tag">CIDR</span>
-          </div>
-          <a href="https://github.com/seanibeziako/firewall-rule-analyzer" target="_blank" rel="noopener" class="mini-link">View on GitHub →</a>
-        </div>
-        <div class="project-mini-card reveal">
-          <div class="mini-title">Phishing Email Analyzer</div>
-          <div class="mini-desc">Parses .eml files to extract IOCs, analyze headers for spoofing indicators (SPF, DKIM, DMARC), and generate structured threat assessment reports.</div>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">Email Forensics</span>
-            <span class="project-tech-tag">IOC</span>
-          </div>
-          <a href="https://github.com/seanibeziako/phishing-email-analyzer" target="_blank" rel="noopener" class="mini-link">View on GitHub →</a>
-        </div>
-        <div class="project-mini-card reveal">
-          <div class="mini-title">File Integrity Monitor</div>
-          <div class="mini-desc">Monitors file systems using SHA-256 hashing to detect unauthorized modifications, additions, deletions, and permission changes in real time.</div>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">SHA-256</span>
-            <span class="project-tech-tag">FIM</span>
-          </div>
-          <a href="https://github.com/seanibeziako/file-integrity-monitor" target="_blank" rel="noopener" class="mini-link">View on GitHub →</a>
-        </div>
-        <div class="project-mini-card reveal">
-          <div class="mini-title">Password Audit Tool</div>
-          <div class="mini-desc">Audits password strength with entropy analysis, policy compliance (NIST/PCI-DSS), and breach checking via HaveIBeenPwned k-anonymity API.</div>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">HIBP API</span>
-            <span class="project-tech-tag">Crypto</span>
-          </div>
-          <a href="https://github.com/seanibeziako/password-audit-tool" target="_blank" rel="noopener" class="mini-link">View on GitHub →</a>
-        </div>
-        <div class="project-mini-card reveal">
-          <div class="mini-title">SOC Alert Triage Simulator</div>
-          <div class="mini-desc">Interactive training tool that generates realistic SOC alerts and walks analysts through the triage process with scoring and feedback.</div>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">SOC Ops</span>
-            <span class="project-tech-tag">Training</span>
-          </div>
-          <a href="https://github.com/seanibeziako/soc-alert-triage-simulator" target="_blank" rel="noopener" class="mini-link">View on GitHub →</a>
-        </div>
-      </div>
-      <div class="projects-cta reveal">
-        11 projects and counting / homelab builds, CTF challenges, and more security tools in the pipeline.
-      </div>
-    </div>
-  </section>
-
-  <!-- Lab (dark section) -->
-  <section id="lab" class="section-bg-dark">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-eyebrow">// 04. Home Lab</span>
-        <h2 class="section-title">Detection engineering <em>lab.</em></h2>
-        <p class="section-lede">A self-hosted SIEM and detection lab I'm building to practice SOC analyst workflows end-to-end: log ingestion, alert tuning, detection authoring (Sigma), and incident triage against controlled adversary emulation. Status badges reflect the real state of each component.</p>
-      </div>
-
-      <div class="lab-grid">
-        <div class="lab-card reveal">
-          <div class="lab-card-header">
-            <h3 class="lab-card-title">Stack</h3>
-            <span class="lab-status lab-status-building">Building</span>
-          </div>
-          <ul class="lab-list">
-            <li><strong>Wazuh Manager</strong> - Ubuntu 22.04 LTS (SIEM + HIDS + log aggregation)</li>
-            <li><strong>Windows 11 Endpoint</strong> - Sysmon w/ Olaf Hartong config, Wazuh agent</li>
-            <li><strong>Ubuntu Endpoint</strong> - auditd, Wazuh agent</li>
-            <li><strong>Kali Linux</strong> - attacker VM for controlled adversary emulation (Atomic Red Team)</li>
-            <li><strong>pfSense</strong> - perimeter firewall, syslog forwarding to Wazuh</li>
-          </ul>
-        </div>
-
-        <div class="lab-card reveal">
-          <div class="lab-card-header">
-            <h3 class="lab-card-title">Topology</h3>
-            <span class="lab-status lab-status-planned">Planned</span>
-          </div>
-          <div class="soc-map" aria-label="SOC home lab topology">
-            <div class="soc-node attacker">
-              <span>Kali</span>
-              <strong>Adversary Emulation</strong>
-            </div>
-            <div class="soc-node endpoint">
-              <span>Windows 11</span>
-              <strong>Sysmon Endpoint</strong>
-            </div>
-            <div class="soc-node endpoint linux">
-              <span>Ubuntu</span>
-              <strong>auditd Endpoint</strong>
-            </div>
-            <div class="soc-node firewall">
-              <span>pfSense</span>
-              <strong>Firewall / Syslog</strong>
-            </div>
-            <div class="soc-node manager">
-              <span>Wazuh</span>
-              <strong>SIEM Manager</strong>
-            </div>
-            <div class="soc-node dashboard">
-              <span>Dashboards</span>
-              <strong>Alert Queue</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lab-section-label reveal">Detection Rules / Mapped to MITRE ATT&amp;CK</div>
-      <div class="detection-grid">
-        <div class="detection-card reveal">
-          <div class="detection-header">
-            <span class="detection-tag">T1110.003</span>
-            <span class="lab-status lab-status-building">Building</span>
-          </div>
-          <h4 class="detection-title">Password Spray / Windows Logon Failures</h4>
-          <p class="detection-desc">Triggers when 10+ failed logons (EventID 4625) target 5+ unique accounts from a single source IP within a 5-minute window.</p>
-          <div class="detection-meta">
-            <span>Source: Windows Security Log</span>
-            <span>Rule: Sigma + Wazuh correlation</span>
-          </div>
-        </div>
-        <div class="detection-card reveal">
-          <div class="detection-header">
-            <span class="detection-tag">T1059.001</span>
-            <span class="lab-status lab-status-building">Building</span>
-          </div>
-          <h4 class="detection-title">Encoded PowerShell Execution</h4>
-          <p class="detection-desc">Detects PowerShell launched with <code>-EncodedCommand</code>, <code>-enc</code>, or base64 payloads via Sysmon Event 1, a common AV-evasion pattern in commodity malware.</p>
-          <div class="detection-meta">
-            <span>Source: Sysmon Event 1</span>
-            <span>Rule: Sigma (proc_creation_win_powershell_enc)</span>
-          </div>
-        </div>
-        <div class="detection-card reveal">
-          <div class="detection-header">
-            <span class="detection-tag">T1003.001</span>
-            <span class="lab-status lab-status-planned">Planned</span>
-          </div>
-          <h4 class="detection-title">LSASS Memory Access</h4>
-          <p class="detection-desc">Flags processes opening a handle to <code>lsass.exe</code> with suspicious GrantedAccess masks (0x1010, 0x1410) via Sysmon Event 10. Classic credential dumping signal (Mimikatz, procdump).</p>
-          <div class="detection-meta">
-            <span>Source: Sysmon Event 10</span>
-            <span>Rule: Sigma (sysmon_lsass_memdump)</span>
-          </div>
-        </div>
-        <div class="detection-card reveal">
-          <div class="detection-header">
-            <span class="detection-tag">T1053.005</span>
-            <span class="lab-status lab-status-planned">Planned</span>
-          </div>
-          <h4 class="detection-title">Suspicious Scheduled Task Creation</h4>
-          <p class="detection-desc">Alerts on <code>schtasks.exe</code> invocations creating tasks that run SYSTEM-level binaries or point to user-writable paths. A common persistence mechanism (EventID 4698).</p>
-          <div class="detection-meta">
-            <span>Source: Windows Security Log</span>
-            <span>Rule: Sigma (win_schtasks_persistence)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="lab-section-label reveal">Sample Detection (Sigma YAML)</div>
-      <pre class="lab-code reveal"><code>title: Potential Password Spray via Failed Logons
-id: a9b1c3f0-lab-0001
-status: experimental
-description: Detects password spray attempts - many failed logons
-  against multiple distinct accounts from a single source.
-logsource:
-  product: windows
-  service: security
-detection:
-  selection:
-    EventID: 4625
-  timeframe: 5m
-  condition: selection | count(TargetUserName) by IpAddress &gt; 5
-level: medium
-tags:
-  - attack.credential_access
-  - attack.t1110.003</code></pre>
-
-      <div class="lab-cta reveal">
-        Lab repo (configs, Sigma rules, screenshots) publishes after the first detection ships. Tracking on <a href="https://github.com/seanibeziako" target="_blank" rel="noopener">github.com/seanibeziako</a>.
-      </div>
-    </div>
-  </section>
+  <section id="projects"><div class="section-inner">
+    <div class="reveal project-section-intro"><span class="section-eyebrow">Technical work</span><h2 class="section-title">Selected <em>projects.</em></h2><p class="section-lede">Directory administration and network troubleshooting, with code and documentation on GitHub.</p></div>
+    <article class="project-card featured reveal current-lab" data-project="active-directory-lab">
+      <div class="project-heading"><span class="project-index">01</span><div><p class="project-subtitle">Windows Server / PowerShell</p><h3 class="project-title">Active Directory Support Lab</h3></div><a class="project-open" href="https://github.com/seanibeziako/active-directory-lab" target="_blank" rel="noopener" aria-label="Open Active Directory Support Lab on GitHub">↗</a></div>
+      <div class="project-body"><p class="project-description">A Windows Server lab for directory administration and common help desk exercises: domain setup, account access, group membership, and workstation troubleshooting.</p>
+      <ul class="project-highlights"><li>AD DS, DNS, DHCP, and Windows client domain membership.</li><li>PowerShell exercises for a test organizational unit, user, and security group.</li><li>Account-support exercises, troubleshooting notes, and a verification checklist.</li></ul></div>
+      <div class="project-tech"><span class="project-tech-tag">Active Directory</span><span class="project-tech-tag">Windows Server</span><span class="project-tech-tag">PowerShell</span><span class="project-tech-tag">DNS / DHCP</span></div>
+      <div class="project-links"><a class="btn btn-outline" href="https://github.com/seanibeziako/active-directory-lab" target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="project-card featured reveal current-lab" data-project="network-connectivity-lab">
+      <div class="project-heading"><span class="project-index">02</span><div><p class="project-subtitle">Python / Networking</p><h3 class="project-title">Network Connectivity Lab</h3></div><a class="project-open" href="https://github.com/seanibeziako/network-connectivity-lab" target="_blank" rel="noopener" aria-label="Open Network Connectivity Lab on GitHub">↗</a></div>
+      <div class="project-body"><p class="project-description">A small Python command-line tool for checking whether a hostname resolves and whether a TCP connection can reach a single port. Includes a separate small-office Packet Tracer example.</p>
+      <ul class="project-highlights"><li>Distinguishes DNS lookup failures from TCP connection failures.</li><li>Automated checks cover loopback connections, refused connections, and invalid input.</li><li>A router, switch, IPv4 configuration, and ping checks in the Packet Tracer example.</li></ul></div>
+      <div class="project-tech"><span class="project-tech-tag">Python</span><span class="project-tech-tag">DNS</span><span class="project-tech-tag">TCP/IP</span><span class="project-tech-tag">Packet Tracer</span></div>
+      <div class="project-links"><a class="btn btn-outline" href="https://github.com/seanibeziako/network-connectivity-lab" target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a></div>
+    </article>
+  </div></section>
 
   <!-- Image band - cinematic divider between Lab and Experience -->
   <div class="image-band" aria-hidden="true">
@@ -728,236 +186,20 @@ tags:
   </div>
 
   <!-- Experience -->
-  <section id="experience">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-eyebrow">// 05. Experience</span>
-        <h2 class="section-title">Where I have worked.</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-date">Feb 2026 - Present</div>
-          <h3 class="timeline-role">Test Technician</h3>
-          <p class="timeline-company">Ingrasys (Foxconn Technology Group) - Houston, TX</p>
-          <p class="timeline-focus">Server validation, hardware QA, AI infrastructure</p>
-          <ul class="timeline-points">
-            <li>Perform L10 server-level validation testing, BootstrapLite (BSL), MDAAS diagnostics, and full system verification on AI server hardware built for Microsoft, reducing pre-shipment defect risk</li>
-            <li>Own hardware QA across fully assembled AI server units, verifying boot sequences, component functionality, and firmware integrity prior to customer delivery</li>
-          </ul>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-date">Dec 2024 - Nov 2025</div>
-          <h3 class="timeline-role">DC Warehouse Equipment Operator I</h3>
-          <p class="timeline-company">Ferguson - Brookshire, TX</p>
-          <p class="timeline-focus">IT troubleshooting, device support, documentation</p>
-          <ul class="timeline-points">
-            <li>Troubleshot 30+ daily RF scanner, wireless connectivity, and peripheral device issues across a 200,000+ sq ft facility supporting 50+ active users per shift</li>
-            <li>Created 5+ knowledge base articles with standardized troubleshooting procedures after identifying recurring error patterns, reducing repeat device issues by an estimated 25%</li>
-            <li>Maintained 100% accuracy in incident logging and equipment documentation across 11 months, enabling leadership to track and resolve recurring hardware defects</li>
-            <li>Collaborated with operations and IT teams to escalate complex access and connectivity issues, averaging under 30-minute resolution</li>
-          </ul>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-date">Jan 2022 - May 2023</div>
-          <h3 class="timeline-role">Operations Systems Associate</h3>
-          <p class="timeline-company">Amazon (ABHM Logistics) - Katy, TX</p>
-          <p class="timeline-focus">Logistics tech, system troubleshooting, operations</p>
-          <ul class="timeline-points">
-            <li>Maintained 98% on-time delivery rate across 150+ daily deliveries by troubleshooting mobile logistics apps, GPS routing, and dispatch tools over 16-month tenure</li>
-            <li>Identified and reported 10+ system glitches impacting operational accuracy, contributing to workflow improvements while processing 1,000+ packages per shift</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="experience"><div class="section-inner"><div class="reveal"><span class="section-eyebrow">Experience</span><h2 class="section-title">Where I've <em>worked.</em></h2></div><div class="timeline"><div class="timeline-item reveal"><div class="timeline-date">Feb 2026 – May 2026</div><h3 class="timeline-role">Test Technician</h3><p class="timeline-company">Ingrasys (Foxconn Technology Group) · Houston, TX</p><p class="timeline-focus">Hardware diagnostics, identity, and endpoint support</p><ul class="timeline-points"><li>Investigated server test failures using diagnostic logs and hardware telemetry to isolate component, firmware, and connectivity faults; coordinated technical escalations with vendors.</li><li>Directed incident triage for a 1,200-device environment, prioritizing critical issues and coordinating troubleshooting across desktop, network, and infrastructure teams.</li><li>Built ServiceNow escalation workflows and knowledge articles, reducing average resolution time by 32% and improving first-contact resolution to 85%.</li><li>Administered Active Directory and Microsoft Entra ID accounts, groups, access changes, and MFA issues using least-privilege practices.</li><li>Coordinated Windows deployment and Intune policy updates across 400 endpoints; tracked compliance, patching, and remediation.</li><li>Analyzed recurring hardware and network incidents, coordinated vendor follow-up, and reduced repeat failures by 25%.</li></ul></div><div class="timeline-item reveal"><div class="timeline-date">Dec 2024 – Nov 2025</div><h3 class="timeline-role">Warehouse Equipment Operator I</h3><p class="timeline-company">Ferguson Enterprises · Brookshire, TX</p><p class="timeline-focus">Warehouse systems, device troubleshooting, and customer support</p><ul class="timeline-points"><li>Compared picked items, SKU labels, and quantities with order records; investigated discrepancies with the team before staging shipments.</li><li>Tracked inventory movements and storage locations using RF scanners and warehouse systems, helping align digital records with physical stock.</li><li>Troubleshot scanner, printer, wireless, and workstation issues during warehouse operations; documented symptoms and escalated unresolved problems.</li><li>Checked item availability and coordinated with warehouse staff on Will Call priorities, order exceptions, and customer questions.</li><li>Operated warehouse equipment to move and stage materials, maintained organized work areas, and followed site safety procedures.</li></ul></div></div></div></section>
 
   <!-- Education -->
-  <section id="education" class="section-bg-warm">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-eyebrow">// 06. Education &amp; Certs</span>
-        <h2 class="section-title">Credentials.</h2>
-      </div>
-      <div class="edu-grid">
-        <div class="edu-card reveal">
-          <div class="edu-card-label">Education</div>
-          <h3>Texas State Technical College</h3>
-          <p>Associate of Applied Science in Cybersecurity</p>
-          <p>Aug 2024 - Aug 2026 (Expected) | Waco, TX</p>
-          <p>Final semester: general education requirements after completed cybersecurity core</p>
-          <p><strong>GPA: 3.9 / 4.0</strong></p>
-          <div class="edu-honors">
-            <span class="edu-honor-tag">Scholastic Excellence Award</span>
-            <span class="edu-honor-tag">Chancellor's Honor Roll</span>
-          </div>
-          <div class="edu-coursework">
-            <span class="edu-coursework-label">Key Coursework</span>
-            <div class="edu-coursework-list">
-              <span>Enterprise Network Design</span>
-              <span>Windows Administration</span>
-              <span>Network Security</span>
-              <span>Incident Response</span>
-            </div>
-          </div>
-        </div>
-        <div class="edu-card reveal">
-          <div class="edu-card-label">Certifications</div>
-          <div class="cert-item">
-            <div class="cert-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-            </div>
-            <div class="cert-info">
-              <h4>CompTIA A+</h4>
-              <p>In Progress / Expected Q2 2026</p>
-              <div class="cert-progress">
-                <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
-                <span class="progress-label">95% complete</span>
-              </div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <div class="cert-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div class="cert-info">
-              <h4>CompTIA Security+</h4>
-              <p>In Progress / Expected Q3 2026</p>
-              <div class="cert-progress">
-                <div class="progress-bar"><div class="progress-fill" style="width: 30%"></div></div>
-                <span class="progress-label">30% complete</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Currently Working On -->
-  <section id="currently">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-eyebrow">// 07. Currently</span>
-        <h2 class="section-title">What I am working on.</h2>
-      </div>
-      <div class="currently-grid">
-        <div class="currently-card reveal">
-          <div class="currently-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-          </div>
-          <h3>CompTIA A+ Certification</h3>
-          <p>Final exam prep. Hardware, networking, mobile devices, troubleshooting methodology, and operating systems.</p>
-          <div class="currently-status">
-            <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
-            <span class="progress-label">95%</span>
-          </div>
-        </div>
-        <div class="currently-card reveal">
-          <div class="currently-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>CompTIA Security+</h3>
-          <p>Threats, attacks, vulnerabilities, identity management, risk frameworks. Building on the A+ foundation.</p>
-          <div class="currently-status">
-            <div class="progress-bar"><div class="progress-fill" style="width: 30%"></div></div>
-            <span class="progress-label">30%</span>
-          </div>
-        </div>
-        <div class="currently-card reveal">
-          <div class="currently-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>Wazuh SOC Home Lab</h3>
-          <p>Wiring up Sysmon endpoints, pfSense syslog, and the first Sigma detection rules. Adversary emulation up next.</p>
-          <div class="currently-status">
-            <div class="progress-bar"><div class="progress-fill" style="width: 40%"></div></div>
-            <span class="progress-label">Building</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Learning Log / Blog -->
-  <section id="blog" class="section-bg-warm">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-eyebrow">// 08. Learning Log</span>
-        <h2 class="section-title">Notes from the lab.</h2>
-        <p class="section-lede">Short writeups on the projects, the troubleshooting, and the lessons that stuck.</p>
-      </div>
-      <div class="blog-carousel-wrap">
-      <div class="blog-grid-horizontal" id="blogCarousel">
-        <article class="blog-card reveal">
-          <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80&auto=format&fit=crop');" aria-hidden="true"></div>
-          <div class="blog-card-body">
-            <div class="blog-date">Feb 2026</div>
-            <h3 class="blog-title">Building a 9-Tool Security Portfolio</h3>
-            <p class="blog-excerpt">From SIEM log analysis to vulnerability scanning. Why I built 9 Python security tools covering SOC operations, threat intelligence, network forensics, and compliance auditing. Each tool solves a real-world security problem.</p>
-            <div class="blog-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Security</span>
-              <span class="skill-tag">SOC</span>
-            </div>
-          </div>
-        </article>
-        <article class="blog-card reveal">
-          <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80&auto=format&fit=crop');" aria-hidden="true"></div>
-          <div class="blog-card-body">
-            <div class="blog-date">Feb 2026</div>
-            <h3 class="blog-title">Automating IT Ops With PowerShell</h3>
-            <p class="blog-excerpt">Why I built an 8-module automation toolkit for IT teams. From AD user onboarding to system health dashboards. Lessons learned about scripting for real-world workflows and thinking like a sysadmin.</p>
-            <div class="blog-tags">
-              <span class="skill-tag">PowerShell</span>
-              <span class="skill-tag">Active Directory</span>
-              <span class="skill-tag">Automation</span>
-            </div>
-          </div>
-        </article>
-        <article class="blog-card reveal">
-          <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&q=80&auto=format&fit=crop');" aria-hidden="true"></div>
-          <div class="blog-card-body">
-            <div class="blog-date">Dec 2025</div>
-            <h3 class="blog-title">Building a Hub-and-Spoke Network From Scratch</h3>
-            <p class="blog-excerpt">Lessons learned from designing a scalable enterprise network in Cisco Packet Tracer, including VLAN segmentation, Inter-VLAN routing, and why documentation matters more than you think.</p>
-            <div class="blog-tags">
-              <span class="skill-tag">Networking</span>
-              <span class="skill-tag">Cisco</span>
-              <span class="skill-tag">VLANs</span>
-            </div>
-          </div>
-        </article>
-        <article class="blog-card reveal">
-          <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=1200&q=80&auto=format&fit=crop');" aria-hidden="true"></div>
-          <div class="blog-card-body">
-            <div class="blog-date">Nov 2025</div>
-            <h3 class="blog-title">What I Learned Troubleshooting for 50+ Users</h3>
-            <p class="blog-excerpt">Reflections on 11 months of hands-on IT troubleshooting at Ferguson. Pattern recognition, documentation habits, and the soft skills that matter most in support roles.</p>
-            <div class="blog-tags">
-              <span class="skill-tag">Help Desk</span>
-              <span class="skill-tag">Troubleshooting</span>
-            </div>
-          </div>
-        </article>
-      </div>
-      </div>
-      <div class="blog-nav reveal">
-        <button class="blog-nav-btn" id="blogPrev" aria-label="Previous post">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button class="blog-nav-btn" id="blogNext" aria-label="Next post">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-    </div>
-  </section>
+  <section id="education" class="section-bg-warm"><div class="section-inner"><div class="reveal"><span class="section-eyebrow">Education</span><h2 class="section-title">A foundation in <em>cybersecurity.</em></h2></div>
+    <div class="edu-grid"><div class="edu-card reveal"><div class="edu-card-label">Completed · August 2026</div><h3>Texas State Technical College</h3><p class="degree-name">Associate of Applied Science in Cybersecurity Technology</p><p>Graduated August 21, 2026</p><p><strong>GPA: 3.9 / 4.0</strong></p><div class="edu-honors"><span class="edu-honor-tag">Scholastic Excellence Award</span><span class="edu-honor-tag">Chancellor's Honor Roll</span></div><div class="edu-coursework"><span class="edu-coursework-label">Coursework</span><div class="edu-coursework-list"><span>Enterprise Network Design</span><span>Windows Administration</span><span>Network Security</span><span>Incident Response</span></div></div></div>
+    <div class="education-note reveal"><span class="section-eyebrow">From class to practice</span><p>My current labs focus on the support tasks I want to keep working on: accounts, access, Windows systems, and network connectivity.</p><a href="#projects" class="pillar-link">Explore the labs <span aria-hidden="true">↗</span></a><a href="assets/Sean_Ibeziako_Resume.pdf" download class="btn btn-primary">Download résumé</a></div></div>
+  </div></section>
 
   <!-- Image band 2 - lead-in to Contact -->
   <div class="image-band image-band-2" aria-hidden="true">
     <div class="image-band-inner">
       <span class="image-band-eyebrow">// Houston, TX / On the ground</span>
       <p class="image-band-quote">
-        Looking for a team that takes <em>tickets seriously</em> and treats junior talent like it'll matter in five years.
+        Looking for my next role in <em>IT support.</em>
       </p>
       <span class="image-band-attr">Available now / Sean Ibeziako</span>
     </div>
@@ -967,9 +209,9 @@ tags:
   <section id="contact" class="section-bg-dark contact-section">
     <div class="section-inner">
       <div class="contact-grid reveal">
-        <span class="section-eyebrow">// 09. Contact</span>
+        <span class="section-eyebrow">Contact</span>
         <h2 class="section-title">Let's <em>connect.</em></h2>
-        <p class="contact-lede">I am actively seeking IT Support and Cybersecurity opportunities in the Houston/Katy, TX area. Feel free to reach out, I would love to hear from you.</p>
+        <p class="contact-lede">I'm looking for IT support and desktop support opportunities. Email is the best way to reach me.</p>
         <div class="contact-links">
           <a href="mailto:sibeziako@gmail.com" class="contact-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -983,10 +225,6 @@ tags:
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
             GitHub
           </a>
-          <a href="tel:+12819034361" class="contact-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            281-903-4361
-          </a>
         </div>
       </div>
     </div>
@@ -997,7 +235,7 @@ tags:
     <div class="footer-inner">
       <div class="footer-brand">
         <span class="footer-name">Sean Ibeziako</span>
-        <span class="footer-tagline">IT Support &amp; Cybersecurity / Houston, TX</span>
+        <span class="footer-tagline">IT Support &amp; Operations / Houston, TX</span>
       </div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/seanibeziako" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -1010,7 +248,7 @@ tags:
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </a>
       </div>
-      <div class="footer-copy">Built with purpose. 2026.</div>
+      <div class="footer-copy">© 2026 Sean Ibeziako</div>
     </div>
   </footer>
 
@@ -1157,11 +395,13 @@ tags:
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
       navToggle.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', String(navLinks.classList.contains('open')));
     });
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
         navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
       });
     });
 
@@ -1225,16 +465,15 @@ tags:
     });
 
     const commands = {
-      help: 'Available commands: <span class="t-cmd">whoami</span>, <span class="t-cmd">skills</span>, <span class="t-cmd">experience</span>, <span class="t-cmd">education</span>, <span class="t-cmd">contact</span>, <span class="t-cmd">certifications</span>, <span class="t-cmd">projects</span>, <span class="t-cmd">clear</span>, <span class="t-cmd">neofetch</span>',
-      whoami: 'Sean Ibeziako - IT Support & Cybersecurity Professional<br>Location: Houston / Katy, TX<br>Final-semester AAS Cybersecurity student (3.9 GPA)<br>Targeting: IT Help Desk, Desktop Support, Junior SOC Analyst, Cybersecurity roles',
-      skills: '<span class="t-label">OS:</span> Windows 10/11, Windows Server, macOS, Linux<br><span class="t-label">Help Desk:</span> ServiceNow, Jira, RDP, TeamViewer<br><span class="t-label">Networking:</span> TCP/IP, DNS, DHCP, VPN, VLANs, ACLs, 802.1Q<br><span class="t-label">Admin:</span> Active Directory, M365, PowerShell, Azure AD, Group Policy<br><span class="t-label">Security:</span> Wireshark, VirtualBox, Log Analysis, Patch Mgmt',
-      experience: '<span class="t-label">Ingrasys (Foxconn)</span> (Feb 2026 - Present) - AI server validation, L10 testing, hardware QA<br><span class="t-label">Ferguson</span> (Dec 2024 - Nov 2025) - IT troubleshooting for 50+ users daily<br><span class="t-label">Amazon</span> (Jan 2022 - May 2023) - Logistics tech, 98% on-time delivery',
-      education: 'Texas State Technical College<br>AAS Cybersecurity | GPA: 3.9<br>Expected Graduation: August 2026<br>Final semester: general education requirements<br>Honors: Scholastic Excellence Award, Chancellor\'s Honor Roll<br>Completed core: Enterprise Network Design, Windows Admin, Network Security, Incident Response',
-      contact: '<span class="t-label">Email:</span> sibeziako@gmail.com<br><span class="t-label">Phone:</span> 281-903-4361<br><span class="t-label">LinkedIn:</span> linkedin.com/in/seanibeziako<br><span class="t-label">GitHub:</span> github.com/seanibeziako',
-      certifications: 'CompTIA A+ - In Progress (Expected Q2 2026) [===============-] 95%<br>CompTIA Security+ - In Progress (Expected Q3 2026) [====------------] 30%',
-      projects: '<span class="t-label">Security Audit Dashboard</span> (May 2026) [NEW]<br>Workstation compliance scoring, remediation queue, executive report<br><br><span class="t-label">IT Automation Toolkit</span> (Feb 2026)<br>8 PowerShell modules for AD, diagnostics, deployment, alerting<br><br><span class="t-label">Enterprise Network Simulation</span> (Dec 2025)<br>Hub-and-Spoke campus | Cisco Packet Tracer<br><br><span class="t-label">Security Tools Portfolio</span> (Feb 2026) [9 TOOLS]<br>SIEM Log Analyzer | Threat Intel Dashboard | Vulnerability Scanner<br>Network Traffic Analyzer | Firewall Rule Analyzer | Phishing Email Analyzer<br>File Integrity Monitor | Password Audit Tool | SOC Alert Triage Simulator<br><br>All projects at github.com/seanibeziako',
-      neofetch: '<span class="t-label">sean@portfolio</span><br>------------------<br><span class="t-label">OS:</span> Career v2.0<br><span class="t-label">Host:</span> Houston, TX<br><span class="t-label">Kernel:</span> Cybersecurity AAS<br><span class="t-label">Uptime:</span> 3+ years in tech<br><span class="t-label">Shell:</span> PowerShell, Bash<br><span class="t-label">DE:</span> Editorial Mode<br><span class="t-label">CPU:</span> Always Learning<br><span class="t-label">Memory:</span> 100+ issues resolved<br><span class="t-label">GPU:</span> 3.9 GPA rendering'
-    };
+      "help": "Available commands: whoami, skills, experience, education, contact, projects, clear, neofetch",
+      "whoami": "Sean Ibeziako — IT support and operations<br>Sugar Land / Houston, TX<br>TSTC graduate · AAS Cybersecurity Technology",
+      "skills": "Windows 10/11, Windows Server, Linux<br>Active Directory, Microsoft Entra ID, Intune, Microsoft 365<br>ServiceNow, PowerShell, DNS, DHCP, VPN<br>Hardware diagnostics, documentation, RF scanners, inventory systems",
+      "experience": "Ingrasys (Foxconn Technology Group) · Test Technician · Feb 2026–May 2026<br>Ferguson Enterprises · Warehouse Equipment Operator I · Dec 2024–Nov 2025",
+      "education": "Texas State Technical College<br>Associate of Applied Science in Cybersecurity Technology<br>Graduated August 21, 2026",
+      "contact": "Email: sibeziako@gmail.com<br>LinkedIn: linkedin.com/in/seanibeziako<br>GitHub: github.com/seanibeziako",
+      "projects": "Active Directory Support Lab — github.com/seanibeziako/active-directory-lab<br>Network Connectivity Lab — github.com/seanibeziako/network-connectivity-lab",
+      "neofetch": "sean@portfolio<br>------------------<br>Location: Houston, TX<br>Focus: IT support and operations<br>Education: AAS Cybersecurity Technology<br>Projects: Active Directory Support Lab, Network Connectivity Lab"
+};
 
     let commandHistory = [];
     let historyIndex = -1;
@@ -1271,7 +510,7 @@ tags:
 
         const inputLine = document.createElement('div');
         inputLine.classList.add('terminal-output');
-        inputLine.innerHTML = '<span class="terminal-prompt-echo">visitor@sean ~ $</span> ' + cmd;
+        inputLine.textContent = 'visitor@sean ~ $ ' + cmd;
         terminalBody.appendChild(inputLine);
 
         if (cmd === 'clear') {

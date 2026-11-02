@@ -1,31 +1,23 @@
-# seanibeziako.github.io
+# Sean Ibeziako — Portfolio
 
-Personal portfolio website for **Sean Ibeziako** - IT Support & Cybersecurity Professional based in Houston, TX.
+Personal portfolio for IT support and operations work, published at
+[seanibeziako.github.io](https://seanibeziako.github.io).
 
-## About
+The site features two current projects:
 
-This is my professional portfolio showcasing my technical skills, projects, work experience, and certifications. Built to give recruiters and hiring managers a quick, visual overview of what I bring to the table.
+- [Active Directory Support Lab](https://github.com/seanibeziako/active-directory-lab)
+- [Network Connectivity Lab](https://github.com/seanibeziako/network-connectivity-lab)
 
-**Live site:** [seanibeziako.github.io](https://seanibeziako.github.io)
+Employment details follow the current résumé: Ingrasys (February–May 2026)
+and Ferguson Enterprises (December 2024–November 2025). Education lists the
+completed AAS in Cybersecurity Technology from Texas State Technical College.
 
-## What's Inside
+The downloadable résumé is a public copy without a phone number. The private
+master remains separate.
 
-- **Hero** - Introduction with headshot and resume download
-- **Stats** - Key metrics from my professional experience
-- **Skills** - Technical toolkit organized by category
-- **Projects** - Scalable Enterprise Network Simulation with interactive topology diagram
-- **Experience** - Timeline of roles at Ferguson, Depop, and Amazon
-- **Education & Certs** - AAS Cybersecurity (3.9 GPA), CompTIA A+ and Security+ in progress
-- **Currently Working On** - Active learning goals with progress tracking
-
-## Tech Stack
-
-- HTML, CSS, vanilla JavaScript
-- No frameworks or dependencies
-- Hosted on GitHub Pages
-- Google Fonts (Inter, JetBrains Mono)
+Built with HTML, CSS, and vanilla JavaScript; hosted on GitHub Pages.
 
 ## Contact
 
-- **Email:** sibeziako@gmail.com
-- **LinkedIn:** [linkedin.com/in/seanibeziako](https://linkedin.com/in/seanibeziako)
+- Email: sibeziako@gmail.com
+- LinkedIn: https://www.linkedin.com/in/seanibeziako
